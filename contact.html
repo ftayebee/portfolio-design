@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me — F.Tayebee Portfolio</title>
+  <meta name="description" content="Get in touch to discuss your project. Available for freelance web development work." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/plugins/bootstrap-5.3.8/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/plugins/fontawesome-7.1.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/media.css" />
+</head>
+
+<body data-theme="dark-green" data-page="contact">
+
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Page Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader-logo">
+      <img src="./assets/images/sample-logo.png" alt="Loading" />
+    </div>
+    <div class="page-loader-spinner"></div>
+  </div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition-overlay" aria-hidden="true"></div>
+
+  <!-- Theme Settings Panel Trigger -->
+  <button class="btn-theme-setting" id="openThemePanel" aria-label="Open theme settings">
+    <i class="ri-settings-2-line"></i>
+  </button>
+  <div id="theme-backdrop"></div>
+
+  <!-- Theme Settings Panel -->
+  <aside id="theme-panel">
+    <h3>Theme Settings</h3>
+    <div class="setting-section">
+      <h4>Banner Background</h4>
+      <div class="bg-options">
+        <div class="bg-item" data-bg="./assets/images/banner-bg2.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg3.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg4.png"></div>
+      </div>
+    </div>
+    <div class="setting-section">
+      <h4>Theme Colors</h4>
+      <div class="theme-colors">
+        <div class="color-item" data-theme="dark-green"  style="background:#4caf50"></div>
+        <div class="color-item" data-theme="dark-orange" style="background:#ff987b"></div>
+        <div class="color-item" data-theme="dark-purple" style="background:#7b57ff"></div>
+        <div class="color-item" data-theme="dark-teal"   style="background:#009688"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  <main class="main-container" id="main-content">
+    <div class="webgl-glass-cursor"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="main-navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+        </a>
+        <ul class="navbar-nav mx-auto d-none d-lg-flex">
+          <li class="nav-item">
+            <a class="nav-link nav-home active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-about" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-services" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-contact" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a class="btn btn-outline-primary ms-3 d-none d-lg-block btn-main" href="contact.html">Contact Me</a>
+        </div>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
+          <ul class="navbar-nav text-center w-100">
+            <li class="nav-item"><a class="nav-link nav-home"      href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-about"     href="about.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link nav-services"  href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-contact"   href="contact.html">Contact</a></li>
+            <li class="nav-item mt-2"><a class="btn btn-outline-primary w-100" href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero-section">
+      <div class="page-hero-content">
+        <span class="section-tag d-inline-flex align-items-center gap-2 mb-2">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" />
+          GET IN TOUCH
+        </span>
+        <h1 class="page-hero-title">Let's <span class="highlight">Connect</span></h1>
+        <p class="mb-3" style="font-family:var(--p-font);font-size:17px;color:rgba(255,255,255,0.65);">
+          Available for freelance work &amp; exciting projects
+        </p>
+        <div class="d-flex justify-content-center mb-4">
+          <div class="availability-badge">
+            <span class="availability-pulse"><span class="dot"></span><span class="ring"></span></span>
+            Available for Work
+          </div>
+        </div>
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="bc-separator"><i class="ri-arrow-right-s-line"></i></li>
+            <li class="active">Contact</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT MAIN ===================== -->
+    <section class="ft-inner-section" style="background:#0b1a0b;">
+      <div class="row g-5 align-items-start">
+
+        <!-- LEFT: Contact Info -->
+        <div class="col-12 col-lg-5">
+          <span class="section-tag d-block mb-2 scroll-reveal from-left">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> CONTACT INFO
+          </span>
+          <h2 class="section-title scroll-reveal from-left">
+            Get In <span class="highlight">Touch</span>
+          </h2>
+          <p class="section-subtitle mb-5 scroll-reveal from-left" style="font-family:var(--p-font);">
+            Have a project in mind or just want to say hello? Fill in the form or reach out directly through any of the channels below.
+          </p>
+
+          <div class="d-flex flex-column gap-3 mb-5">
+            <div class="contact-info-item scroll-reveal from-left">
+              <div class="contact-info-icon"><i class="ri-mail-send-line"></i></div>
+              <div>
+                <span class="contact-info-label">Email</span>
+                <a href="mailto:hello@ftayebee.com" class="contact-info-value d-block">hello@ftayebee.com</a>
+              </div>
+            </div>
+            <div class="contact-info-item scroll-reveal from-left">
+              <div class="contact-info-icon"><i class="ri-phone-line"></i></div>
+              <div>
+                <span class="contact-info-label">Phone / WhatsApp</span>
+                <a href="tel:+1234567890" class="contact-info-value d-block">+1 (234) 567-890</a>
+              </div>
+            </div>
+            <div class="contact-info-item scroll-reveal from-left">
+              <div class="contact-info-icon"><i class="ri-map-pin-2-line"></i></div>
+              <div>
+                <span class="contact-info-label">Location</span>
+                <span class="contact-info-value">Remote — Worldwide</span>
+              </div>
+            </div>
+            <div class="contact-info-item scroll-reveal from-left">
+              <div class="contact-info-icon"><i class="ri-time-line"></i></div>
+              <div>
+                <span class="contact-info-label">Office Hours</span>
+                <span class="contact-info-value">Mon – Fri, 9 AM – 6 PM (GMT+6)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-reveal from-left">
+            <p class="mb-3" style="font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.4);">Find Me On</p>
+            <div class="social-icon-row">
+              <a href="#" class="social-icon-btn" aria-label="GitHub"><i class="ri-github-line"></i></a>
+              <a href="#" class="social-icon-btn" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+              <a href="#" class="social-icon-btn" aria-label="Twitter / X"><i class="ri-twitter-x-line"></i></a>
+              <a href="#" class="social-icon-btn" aria-label="Dribbble"><i class="ri-dribbble-line"></i></a>
+              <a href="#" class="social-icon-btn" aria-label="Upwork"><i class="ri-briefcase-4-line"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Form -->
+        <div class="col-12 col-lg-7 scroll-reveal from-right">
+          <div class="contact-form-wrapper">
+            <h3 class="mb-1" style="font-size:22px;font-weight:700;color:var(--text-color);">Send a Message</h3>
+            <p class="mb-4" style="font-family:var(--p-font);font-size:15px;color:rgba(255,255,255,0.5);">
+              I'll get back to you within 24 hours.
+            </p>
+            <form class="ft-form" novalidate>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="contact-name">Full Name <span style="color:#ef4444">*</span></label>
+                    <input type="text" id="contact-name" class="form-input" placeholder="John Doe" required />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="contact-email">Email Address <span style="color:#ef4444">*</span></label>
+                    <input type="email" id="contact-email" class="form-input" placeholder="john@example.com" required />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="contact-subject">Subject</label>
+                    <select id="contact-subject" class="form-select">
+                      <option value="">Select a subject…</option>
+                      <option>Web Development Project</option>
+                      <option>UI/UX Design</option>
+                      <option>WordPress Development</option>
+                      <option>E-Commerce Store</option>
+                      <option>Maintenance &amp; Support</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="contact-budget">Budget Range</label>
+                    <select id="contact-budget" class="form-select">
+                      <option value="">Select budget…</option>
+                      <option>Under $500</option>
+                      <option>$500 – $1,500</option>
+                      <option>$1,500 – $5,000</option>
+                      <option>$5,000 – $10,000</option>
+                      <option>$10,000+</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label class="form-label" for="contact-message">Message <span style="color:#ef4444">*</span></label>
+                    <textarea id="contact-message" class="form-textarea" rows="6" placeholder="Tell me about your project, goals, and timeline…" required></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-glass w-100" style="justify-content:center;">
+                    Send Message
+                    <div class="icon-box ms-2"><i class="ri-send-plane-line"></i></div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESPONSE GUARANTEE ===================== -->
+    <section class="ft-inner-section bg-alt-1">
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> MY PROMISE
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          What to <span class="highlight">Expect</span>
+        </h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-4 scroll-reveal from-bottom">
+          <div class="guarantee-item">
+            <div class="guarantee-icon"><i class="ri-time-line"></i></div>
+            <h4 class="guarantee-title">Response Within 24h</h4>
+            <p class="guarantee-desc">I personally read and respond to every message within one business day, no auto-replies.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 scroll-reveal from-bottom">
+          <div class="guarantee-item">
+            <div class="guarantee-icon"><i class="ri-customer-service-2-line"></i></div>
+            <h4 class="guarantee-title">Free Initial Consultation</h4>
+            <p class="guarantee-desc">We'll discuss your project goals in a free 30-minute call before any commitment is made.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 scroll-reveal from-bottom">
+          <div class="guarantee-item">
+            <div class="guarantee-icon"><i class="ri-rocket-2-line"></i></div>
+            <h4 class="guarantee-title">Project Kickoff in 48h</h4>
+            <p class="guarantee-desc">Once scope is agreed, I'll have a detailed project plan and start date ready within two days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ TEASER ===================== -->
+    <section class="ft-inner-section bg-alt-2">
+      <div class="row g-5 align-items-start">
+        <div class="col-12 col-lg-4 scroll-reveal from-left">
+          <span class="section-tag d-block mb-2">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> FAQ
+          </span>
+          <h2 class="section-title mb-3">Common <span class="highlight">Questions</span></h2>
+          <p class="section-subtitle mb-4" style="font-family:var(--p-font);">
+            Quick answers to the questions I hear most often before a project starts.
+          </p>
+          <a href="faq.html" class="btn btn-sm btn-service-detail">
+            View All FAQ
+            <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+        <div class="col-12 col-lg-8 scroll-reveal from-right">
+          <div class="accordion glass-accordion" id="contactFaq">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false">
+                  How do I get started on a project with you?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                <div class="accordion-body">Fill in the contact form above or send me a direct email with a brief description of your project. I'll reply within 24 hours to schedule a free discovery call.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+                  What is your typical project timeline?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                <div class="accordion-body">Simple landing pages take 1–2 weeks. Full-stack web applications typically take 4–12 weeks depending on complexity and scope. I always provide a detailed timeline before work begins.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+                  Do you offer ongoing maintenance &amp; support?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                <div class="accordion-body">Yes. I offer monthly retainer plans for maintenance, updates, performance monitoring, and feature additions. See the Services page for current plan details.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+                  What payment methods do you accept?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                <div class="accordion-body">I accept bank transfer, PayPal, and Wise. For new clients, I work on a 50% upfront / 50% on delivery basis. Milestone-based payments are available for larger projects.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta-section padding-gap container-fluid">
+      <div class="row cta-content align-items-center">
+        <div class="col-12 col-lg-7">
+          <h2 class="cta-title mb-4">
+            Ready to <span class="highlight">Transform</span><br />Your Web Presence?
+          </h2>
+          <p class="cta-subtitle mb-4">
+            Let's build something great together. Whether it's a new product, a redesign, or a performance overhaul — I'm here to help.
+          </p>
+          <a href="mailto:hello@ftayebee.com" class="btn btn-primary btn-glass btn-lg">
+            Email Me Directly
+            <div class="icon-box"><i class="ri-arrow-right-line"></i></div>
+          </a>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="cta-image">
+            <img src="./assets/images/cta-img.png" alt="Contact F.Tayebee" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <section class="newsletter-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+          </div>
+          <div class="col-12 col-md-4">
+            <form class="newsletter-form">
+              <div class="input-group rounded-pill newsletter-group">
+                <input type="email" class="form-control newsletter-input" placeholder="Enter your email to get updates..." required />
+                <button class="btn newsletter-btn rounded-pill" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-12 col-md-4 mb-4">
+            <div class="whyus-image">
+              <img src="./assets/images/cta-img.png" alt="F.Tayebee" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="row">
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Quick Links</h5>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Me</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Social Media</h5>
+                <ul class="footer-links">
+                  <li><a href="#" target="_blank">Facebook</a></li>
+                  <li><a href="#" target="_blank">LinkedIn</a></li>
+                  <li><a href="#" target="_blank">GitHub</a></li>
+                  <li><a href="mailto:hello@ftayebee.com">Email</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Projects</h5>
+                <ul class="footer-links">
+                  <li><a href="portfolio.html">E-commerce Platform</a></li>
+                  <li><a href="portfolio.html">Billing System</a></li>
+                  <li><a href="portfolio.html">POS System</a></li>
+                  <li><a href="portfolio.html">Portfolio Website</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="copyright-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <p class="copyright-text">All rights reserved. Copyright &copy; 2025</p>
+          </div>
+          <div class="col-6 text-right">
+            <ul class="copyright-menu">
+              <li><a class="footer-menu-item" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="footer-menu-item" href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/plugins/jquery-3.7.1.min.js"></script>
+  <script src="./assets/plugins/bootstrap-5.3.8/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="assets/plugins/fontawesome-7.1.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max:10, speed:400, scale:1.05, glare:true, "max-glare":0.4 });
+    const cursor = document.querySelector(".webgl-glass-cursor");
+    let mouseX=0, mouseY=0, currentX=0, currentY=0, speed=0.15;
+    document.addEventListener("mousemove", e => { mouseX=e.clientX; mouseY=e.clientY; });
+    function animateCursor() {
+      currentX += (mouseX - currentX) * speed;
+      currentY += (mouseY - currentY) * speed;
+      cursor.style.left = `${currentX}px`;
+      cursor.style.top  = `${currentY}px`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+  </script>
+</body>
+</html>

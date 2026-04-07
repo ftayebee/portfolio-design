@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — F.Tayebee Portfolio</title>
+  <meta name="description" content="Browse F.Tayebee's portfolio of web development projects including Laravel, Vue.js, WordPress, and e-commerce solutions." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/plugins/bootstrap-5.3.8/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/plugins/fontawesome-7.1.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/media.css" />
+</head>
+
+<body data-theme="dark-green" data-page="portfolio">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader-logo"><img src="./assets/images/sample-logo.png" alt="Loading" /></div>
+    <div class="page-loader-spinner"></div>
+  </div>
+  <div class="page-transition-overlay" aria-hidden="true"></div>
+
+  <button class="btn-theme-setting" id="openThemePanel" aria-label="Open theme settings"><i class="ri-settings-2-line"></i></button>
+  <div id="theme-backdrop"></div>
+  <aside id="theme-panel">
+    <h3>Theme Settings</h3>
+    <div class="setting-section">
+      <h4>Banner Background</h4>
+      <div class="bg-options">
+        <div class="bg-item" data-bg="./assets/images/banner-bg2.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg3.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg4.png"></div>
+      </div>
+    </div>
+    <div class="setting-section">
+      <h4>Theme Colors</h4>
+      <div class="theme-colors">
+        <div class="color-item" data-theme="dark-green"  style="background:#4caf50"></div>
+        <div class="color-item" data-theme="dark-orange" style="background:#ff987b"></div>
+        <div class="color-item" data-theme="dark-purple" style="background:#7b57ff"></div>
+        <div class="color-item" data-theme="dark-teal"   style="background:#009688"></div>
+      </div>
+    </div>
+  </aside>
+
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <main class="main-container" id="main-content">
+    <div class="webgl-glass-cursor"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="main-navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+        </a>
+        <ul class="navbar-nav mx-auto d-none d-lg-flex">
+          <li class="nav-item"><a class="nav-link nav-home"      href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-about"     href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link nav-services"  href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-contact"   href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex">
+          <a class="btn btn-outline-primary ms-3 d-none d-lg-block btn-main" href="contact.html">Contact Me</a>
+        </div>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
+          <ul class="navbar-nav text-center w-100">
+            <li class="nav-item"><a class="nav-link nav-home"      href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-about"     href="about.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link nav-services"  href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-contact"   href="contact.html">Contact</a></li>
+            <li class="nav-item mt-2"><a class="btn btn-outline-primary w-100" href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero-section">
+      <div class="page-hero-content">
+        <span class="section-tag d-inline-flex align-items-center gap-2 mb-2">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> MY WORK
+        </span>
+        <h1 class="page-hero-title">Projects <span class="highlight">Gallery</span></h1>
+        <p class="mb-4" style="font-family:var(--p-font);font-size:17px;color:rgba(255,255,255,0.65);">
+          A curated selection of real-world projects across full stack, e-commerce, and CMS development
+        </p>
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="bc-separator"><i class="ri-arrow-right-s-line"></i></li>
+            <li class="active">Portfolio</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- FILTER + GRID -->
+    <section class="ft-inner-section" style="background:#0b1a0b;">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar scroll-reveal from-bottom" id="portfolioFilter" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="wordpress">WordPress</button>
+        <button class="filter-btn" data-filter="api">API / Backend</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="fullstack ecommerce">
+          <img src="./assets/images/hacker-working-computer-with-code.jpg" alt="Multi-vendor E-commerce Platform" loading="lazy" />
+          <div class="portfolio-card-badge">Laravel / Vue.js</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">Full Stack · E-Commerce</span>
+            <h4 class="portfolio-card-title">Multi-vendor E-commerce Platform</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="fullstack api">
+          <img src="./assets/images/about-img.jpg" alt="SaaS Billing System" loading="lazy" />
+          <div class="portfolio-card-badge">Laravel API</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">Full Stack · API</span>
+            <h4 class="portfolio-card-title">SaaS Billing &amp; Subscription System</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="frontend">
+          <img src="./assets/images/why-me.jpg" alt="Real-time Admin Dashboard" loading="lazy" />
+          <div class="portfolio-card-badge">Vue.js SPA</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">Frontend</span>
+            <h4 class="portfolio-card-title">Real-time Analytics Dashboard</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="wordpress">
+          <img src="./assets/images/banner-img.png" alt="Corporate WordPress Site" loading="lazy" style="object-position:top;" />
+          <div class="portfolio-card-badge">WordPress</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">WordPress</span>
+            <h4 class="portfolio-card-title">Corporate Website with Custom Theme</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="ecommerce wordpress">
+          <img src="./assets/images/cta-img.png" alt="WooCommerce Store" loading="lazy" />
+          <div class="portfolio-card-badge">WooCommerce</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">E-Commerce · WordPress</span>
+            <h4 class="portfolio-card-title">Fashion WooCommerce Store</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="api fullstack">
+          <img src="./assets/images/hacker-working-computer-with-code.jpg" alt="POS System" loading="lazy" />
+          <div class="portfolio-card-badge">Laravel + Vue</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">Full Stack · API</span>
+            <h4 class="portfolio-card-title">Point-of-Sale &amp; Inventory System</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="frontend">
+          <img src="./assets/images/about-img.jpg" alt="Portfolio Template" loading="lazy" />
+          <div class="portfolio-card-badge">HTML / CSS / JS</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">Frontend</span>
+            <h4 class="portfolio-card-title">Premium Portfolio HTML Template</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="wordpress">
+          <img src="./assets/images/why-me.jpg" alt="Healthcare WordPress Site" loading="lazy" />
+          <div class="portfolio-card-badge">WordPress</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">WordPress</span>
+            <h4 class="portfolio-card-title">Healthcare Clinic Website</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <a href="project-single.html" class="portfolio-card scroll-reveal from-bottom" data-category="fullstack api">
+          <img src="./assets/images/hacker-working-computer-with-code.jpg" alt="Real Estate Platform" loading="lazy" />
+          <div class="portfolio-card-badge">Laravel / Vue.js</div>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-category">Full Stack</span>
+            <h4 class="portfolio-card-title">Real Estate Listing Platform</h4>
+            <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+      </div><!-- /portfolio-grid -->
+
+      <!-- Pagination -->
+      <nav class="pagination-nav" aria-label="Portfolio pagination">
+        <a href="#" class="page-btn page-arrow disabled"><i class="ri-arrow-left-line"></i> Prev</a>
+        <a href="#" class="page-btn active" aria-current="page">1</a>
+        <a href="#" class="page-btn">2</a>
+        <a href="#" class="page-btn">3</a>
+        <a href="#" class="page-btn page-arrow">Next <i class="ri-arrow-right-line"></i></a>
+      </nav>
+    </section>
+
+    <!-- FEATURED PROJECT SPOTLIGHT -->
+    <section class="ft-inner-section bg-alt-2">
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> SPOTLIGHT
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          Featured <span class="highlight">Project</span>
+        </h2>
+      </div>
+      <div class="featured-project-band scroll-reveal from-bottom">
+        <div class="featured-project-image">
+          <img src="./assets/images/hacker-working-computer-with-code.jpg" alt="Multi-vendor E-commerce Platform" loading="lazy" />
+        </div>
+        <div>
+          <span class="featured-project-category">Full Stack · E-Commerce</span>
+          <h3 class="featured-project-title">
+            Multi-vendor E-commerce <span class="highlight">Platform</span>
+          </h3>
+          <p class="featured-project-desc">
+            A complete B2B/B2C marketplace built from scratch with Laravel and Vue.js. Features multi-vendor management, real-time inventory tracking, Stripe payment gateway, and a comprehensive admin dashboard with analytics and reporting.
+          </p>
+          <div class="project-tag-row">
+            <span class="project-tag">Laravel 10</span>
+            <span class="project-tag">Vue.js 3</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">Stripe API</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">AWS S3</span>
+          </div>
+          <a href="project-single.html" class="btn btn-glass">
+            View Full Case Study <div class="icon-box"><i class="ri-arrow-right-line"></i></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT LOGOS -->
+    <section class="ft-inner-section bg-alt-1">
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> SOCIAL PROOF
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          Brands I've <span class="highlight">Worked With</span>
+        </h2>
+      </div>
+      <div class="client-logos-grid scroll-reveal from-bottom">
+        <div class="client-logo"><img src="./assets/images/sample-logo.png" alt="Client 1" loading="lazy" /></div>
+        <div class="client-logo"><img src="./assets/images/sample-logo.png" alt="Client 2" loading="lazy" /></div>
+        <div class="client-logo"><img src="./assets/images/sample-logo.png" alt="Client 3" loading="lazy" /></div>
+        <div class="client-logo"><img src="./assets/images/sample-logo.png" alt="Client 4" loading="lazy" /></div>
+        <div class="client-logo"><img src="./assets/images/sample-logo.png" alt="Client 5" loading="lazy" /></div>
+        <div class="client-logo"><img src="./assets/images/sample-logo.png" alt="Client 6" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section padding-gap container-fluid">
+      <div class="row cta-content align-items-center">
+        <div class="col-12 col-lg-7">
+          <h2 class="cta-title mb-4">
+            Have a Project <span class="highlight">In Mind?</span>
+          </h2>
+          <p class="cta-subtitle mb-4">
+            Let's create something that stands out. Whether it's your first web app or a complete platform rebuild, I'll bring the same attention to detail you see in these projects.
+          </p>
+          <a href="contact.html" class="btn btn-primary btn-glass btn-lg">
+            Start a Conversation <div class="icon-box"><i class="ri-arrow-right-line"></i></div>
+          </a>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="cta-image"><img src="./assets/images/cta-img.png" alt="Start a project" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="newsletter-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+          </div>
+          <div class="col-12 col-md-4">
+            <form class="newsletter-form">
+              <div class="input-group rounded-pill newsletter-group">
+                <input type="email" class="form-control newsletter-input" placeholder="Enter your email to get updates..." required />
+                <button class="btn newsletter-btn rounded-pill" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-12 col-md-4 mb-4"><div class="whyus-image"><img src="./assets/images/cta-img.png" alt="F.Tayebee" class="img-fluid" /></div></div>
+          <div class="col-12 col-md-8">
+            <div class="row">
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Quick Links</h5>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Me</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Social Media</h5>
+                <ul class="footer-links">
+                  <li><a href="#" target="_blank">Facebook</a></li>
+                  <li><a href="#" target="_blank">LinkedIn</a></li>
+                  <li><a href="#" target="_blank">GitHub</a></li>
+                  <li><a href="mailto:hello@ftayebee.com">Email</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Projects</h5>
+                <ul class="footer-links">
+                  <li><a href="project-single.html">E-commerce Platform</a></li>
+                  <li><a href="project-single.html">Billing System</a></li>
+                  <li><a href="project-single.html">POS System</a></li>
+                  <li><a href="project-single.html">Portfolio Website</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="copyright-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6"><p class="copyright-text">All rights reserved. Copyright &copy; 2025</p></div>
+          <div class="col-6 text-right">
+            <ul class="copyright-menu">
+              <li><a class="footer-menu-item" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="footer-menu-item" href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/plugins/jquery-3.7.1.min.js"></script>
+  <script src="./assets/plugins/bootstrap-5.3.8/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="assets/plugins/fontawesome-7.1.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max:10, speed:400, scale:1.05, glare:true, "max-glare":0.4 });
+
+    // Portfolio filter
+    (function () {
+      var btns  = document.querySelectorAll('#portfolioFilter .filter-btn');
+      var cards = document.querySelectorAll('#portfolioGrid .portfolio-card');
+
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('active'); });
+          this.classList.add('active');
+
+          var filter = this.dataset.filter;
+          cards.forEach(function (card) {
+            var cats = (card.dataset.category || '').split(' ');
+            var show = filter === 'all' || cats.indexOf(filter) !== -1;
+            card.style.opacity    = show ? '1' : '0';
+            card.style.transform  = show ? 'scale(1)'   : 'scale(0.92)';
+            card.style.pointerEvents = show ? 'auto' : 'none';
+            card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+            card.parentElement.style.display = show ? '' : 'none';
+          });
+          // Re-show hidden grid items that match (grid hides the <a> not a wrapper)
+          cards.forEach(function (card) {
+            var cats = (card.dataset.category || '').split(' ');
+            var show = filter === 'all' || cats.indexOf(filter) !== -1;
+            card.style.display = show ? 'block' : 'none';
+          });
+        });
+      });
+    })();
+
+    const cursor = document.querySelector(".webgl-glass-cursor");
+    let mouseX=0, mouseY=0, currentX=0, currentY=0, speed=0.15;
+    document.addEventListener("mousemove", e => { mouseX=e.clientX; mouseY=e.clientY; });
+    function animateCursor() {
+      currentX += (mouseX - currentX) * speed; currentY += (mouseY - currentY) * speed;
+      cursor.style.left = `${currentX}px`; cursor.style.top = `${currentY}px`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+  </script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — F.Tayebee Portfolio</title>
+  <meta name="description" content="Learn about F.Tayebee — full-stack web developer with 5+ years of experience building modern, scalable web applications." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/plugins/bootstrap-5.3.8/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/plugins/fontawesome-7.1.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/media.css" />
+</head>
+
+<body data-theme="dark-green" data-page="about">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader-logo"><img src="./assets/images/sample-logo.png" alt="Loading" /></div>
+    <div class="page-loader-spinner"></div>
+  </div>
+  <div class="page-transition-overlay" aria-hidden="true"></div>
+
+  <button class="btn-theme-setting" id="openThemePanel" aria-label="Open theme settings"><i class="ri-settings-2-line"></i></button>
+  <div id="theme-backdrop"></div>
+  <aside id="theme-panel">
+    <h3>Theme Settings</h3>
+    <div class="setting-section">
+      <h4>Banner Background</h4>
+      <div class="bg-options">
+        <div class="bg-item" data-bg="./assets/images/banner-bg2.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg3.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg4.png"></div>
+      </div>
+    </div>
+    <div class="setting-section">
+      <h4>Theme Colors</h4>
+      <div class="theme-colors">
+        <div class="color-item" data-theme="dark-green"  style="background:#4caf50"></div>
+        <div class="color-item" data-theme="dark-orange" style="background:#ff987b"></div>
+        <div class="color-item" data-theme="dark-purple" style="background:#7b57ff"></div>
+        <div class="color-item" data-theme="dark-teal"   style="background:#009688"></div>
+      </div>
+    </div>
+  </aside>
+
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <main class="main-container" id="main-content">
+    <div class="webgl-glass-cursor"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="main-navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+        </a>
+        <ul class="navbar-nav mx-auto d-none d-lg-flex">
+          <li class="nav-item">
+            <a class="nav-link nav-home active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-about" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-services" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-contact" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a class="btn btn-outline-primary ms-3 d-none d-lg-block btn-main" href="contact.html">Contact Me</a>
+        </div>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
+          <ul class="navbar-nav text-center w-100">
+            <li class="nav-item"><a class="nav-link nav-home"      href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-about"     href="about.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link nav-services"  href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-contact"   href="contact.html">Contact</a></li>
+            <li class="nav-item mt-2"><a class="btn btn-outline-primary w-100" href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero-section">
+      <div class="page-hero-content">
+        <span class="section-tag d-inline-flex align-items-center gap-2 mb-2">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> WHO I AM
+        </span>
+        <h1 class="page-hero-title">About <span class="highlight">Me</span></h1>
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="bc-separator"><i class="ri-arrow-right-s-line"></i></li>
+            <li class="active">About Me</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- PERSONAL STORY -->
+    <section class="ft-inner-section" style="background:#032408;">
+      <div class="row g-5 align-items-center">
+        <!-- Image -->
+        <div class="col-12 col-lg-5 scroll-reveal from-left">
+          <div class="about-img-wrap">
+            <img src="./assets/images/about-img.jpg" alt="F.Tayebee" loading="lazy" />
+            <div class="about-img-badge">
+              <div class="about-img-badge-icon"><i class="ri-award-line"></i></div>
+              <div>
+                <div class="about-img-badge-number">5+</div>
+                <div class="about-img-badge-label">Years of Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="col-12 col-lg-7">
+          <span class="section-tag d-block mb-2 scroll-reveal from-bottom">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> MY STORY
+          </span>
+          <h2 class="about-title scroll-reveal from-bottom">
+            Crafting Modern <span class="highlight">Web Experiences</span>
+          </h2>
+          <p class="about-subtitle scroll-reveal from-bottom">
+            I'm a full-stack web developer with over 5 years of experience building fast, scalable, and modern web applications. I specialise in PHP, Laravel, Vue.js, Tailwind CSS, Bootstrap, and JavaScript — combining backend precision with frontend polish to deliver complete digital products.
+          </p>
+          <p class="about-subtitle scroll-reveal from-bottom" style="opacity:0.75;">
+            My approach is simple: understand the problem deeply, design clean architecture, and execute with care. Every project I take on gets my full attention, from the first wireframe to the final deployment.
+          </p>
+          <div class="benefit-grid mt-4">
+            <div class="benefit-item glass-box scroll-reveal from-right" data-tilt>
+              <div class="icon"><i class="fa fa-code"></i></div>
+              <h4>Backend Development</h4>
+              <p>Expert in PHP &amp; Laravel — secure APIs, business logic, and performance-optimised systems.</p>
+            </div>
+            <div class="benefit-item glass-box scroll-reveal from-right" data-tilt>
+              <div class="icon"><i class="fa fa-layer-group"></i></div>
+              <h4>Frontend Engineering</h4>
+              <p>Clean, responsive UIs using Vue.js, Tailwind CSS, Bootstrap, and modern JavaScript.</p>
+            </div>
+            <div class="benefit-item glass-box scroll-reveal from-right" data-tilt>
+              <div class="icon"><i class="fa-brands fa-stack-overflow"></i></div>
+              <h4>Full Stack Solutions</h4>
+              <p>End-to-end development from database design to fully interactive user interfaces.</p>
+            </div>
+            <div class="benefit-item glass-box scroll-reveal from-right" data-tilt>
+              <div class="icon"><i class="fa-solid fa-gauge"></i></div>
+              <h4>Performance &amp; SEO</h4>
+              <p>High-speed, SEO-friendly applications built on clean code and industry best practices.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 mt-4 flex-wrap scroll-reveal from-bottom">
+            <a href="portfolio.html" class="btn btn-glass">View My Work</a>
+            <a href="#" class="btn btn-sm btn-service-detail">
+              Download CV <span class="btn-service-icon"><i class="ri-download-line"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS COUNTERS -->
+    <section class="ft-inner-section" style="background:#0b1a0b;">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3 scroll-reveal from-bottom">
+          <div class="stat-counter-card" data-tilt>
+            <div class="stat-counter-icon"><i class="ri-calendar-check-line"></i></div>
+            <div class="stat-counter-number" data-count="5" data-suffix="+">0+</div>
+            <p class="stat-counter-label">Years Experience</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 scroll-reveal from-bottom">
+          <div class="stat-counter-card" data-tilt>
+            <div class="stat-counter-icon"><i class="ri-briefcase-4-line"></i></div>
+            <div class="stat-counter-number" data-count="80" data-suffix="+">0+</div>
+            <p class="stat-counter-label">Projects Delivered</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 scroll-reveal from-bottom">
+          <div class="stat-counter-card" data-tilt>
+            <div class="stat-counter-icon"><i class="ri-user-smile-line"></i></div>
+            <div class="stat-counter-number" data-count="50" data-suffix="+">0+</div>
+            <p class="stat-counter-label">Happy Clients</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 scroll-reveal from-bottom">
+          <div class="stat-counter-card" data-tilt>
+            <div class="stat-counter-icon"><i class="ri-code-s-slash-line"></i></div>
+            <div class="stat-counter-number" data-count="12" data-suffix="+">0+</div>
+            <p class="stat-counter-label">Technologies Mastered</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY VALUES -->
+    <section class="ft-inner-section bg-alt-1" style="position:relative;overflow:hidden;">
+      <span class="txt-bg-overlay">VALUES</span>
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> WHAT I BELIEVE
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          My Core <span class="highlight">Values</span>
+        </h2>
+        <p class="section-subtitle mx-auto scroll-reveal from-bottom" style="max-width:560px;">
+          These principles guide every decision I make — from architecture choices to client communication.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="philosophy-card" data-tilt>
+            <span class="philosophy-number">01</span>
+            <div class="philosophy-icon"><i class="ri-shield-check-line"></i></div>
+            <h4 class="philosophy-title">Quality First</h4>
+            <p class="philosophy-desc">I never ship code I'm not proud of. Clean architecture, proper testing, and attention to detail are non-negotiable.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="philosophy-card" data-tilt>
+            <span class="philosophy-number">02</span>
+            <div class="philosophy-icon"><i class="ri-user-heart-line"></i></div>
+            <h4 class="philosophy-title">Client-Centric</h4>
+            <p class="philosophy-desc">Your goals drive every decision. I listen carefully, communicate clearly, and adapt to your feedback at every step.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="philosophy-card" data-tilt>
+            <span class="philosophy-number">03</span>
+            <div class="philosophy-icon"><i class="ri-flashlight-line"></i></div>
+            <h4 class="philosophy-title">Continuous Growth</h4>
+            <p class="philosophy-desc">Technology evolves fast. I dedicate time every week to learning new tools, patterns, and best practices.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="philosophy-card" data-tilt>
+            <span class="philosophy-number">04</span>
+            <div class="philosophy-icon"><i class="ri-eye-line"></i></div>
+            <h4 class="philosophy-title">Full Transparency</h4>
+            <p class="philosophy-desc">No hidden fees, no surprises. You get clear timelines, regular updates, and honest communication throughout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & TECHNOLOGIES -->
+    <section class="ft-inner-section bg-alt-2">
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> TOOLS
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          Tools &amp; <span class="highlight">Technologies</span>
+        </h2>
+        <p class="section-subtitle mx-auto scroll-reveal from-bottom" style="max-width:520px;">
+          The stack I use daily to build modern, scalable, and production-ready web applications.
+        </p>
+      </div>
+      <div class="tech-grid justify-content-center scroll-reveal from-bottom">
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/html.png" alt="HTML5" loading="lazy" />
+          <span>HTML5</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/css.png" alt="CSS3" loading="lazy" />
+          <span>CSS3</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/js.png" alt="JavaScript" loading="lazy" />
+          <span>JavaScript</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/jquery.png" alt="jQuery" loading="lazy" />
+          <span>jQuery</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/vue.png" alt="Vue.js" loading="lazy" />
+          <span>Vue.js</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/bootstrap.png" alt="Bootstrap" loading="lazy" />
+          <span>Bootstrap</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/tailwind.png" alt="Tailwind" loading="lazy" />
+          <span>Tailwind</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/php.png" alt="PHP" loading="lazy" />
+          <span>PHP</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/laravel.png" alt="Laravel" loading="lazy" />
+          <span>Laravel</span>
+        </div>
+        <div class="tech-grid-item" data-tilt>
+          <img src="./assets/images/tech/wordpress.png" alt="WordPress" loading="lazy" />
+          <span>WordPress</span>
+        </div>
+      </div>
+      <div class="mt-5 text-center scroll-reveal from-bottom">
+        <p class="mb-3" style="font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.4);">Soft Skills</p>
+        <div class="skill-badges-wrap justify-content-center">
+          <span class="skill-badge"><i class="ri-team-line"></i> Communication</span>
+          <span class="skill-badge"><i class="ri-lightbulb-line"></i> Problem Solving</span>
+          <span class="skill-badge"><i class="ri-time-line"></i> Time Management</span>
+          <span class="skill-badge"><i class="ri-focus-2-line"></i> Attention to Detail</span>
+          <span class="skill-badge"><i class="ri-refresh-line"></i> Adaptability</span>
+          <span class="skill-badge"><i class="ri-git-branch-line"></i> Version Control</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER TIMELINE -->
+    <section class="ft-inner-section bg-alt-3" style="position:relative;overflow:hidden;">
+      <span class="txt-bg-overlay">JOURNEY</span>
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> EXPERIENCE
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          My <span class="highlight">Journey</span>
+        </h2>
+      </div>
+      <ul class="timeline scroll-reveal from-bottom">
+        <li class="timeline-item">
+          <div class="timeline-card">
+            <span class="timeline-year">2023 – Present</span>
+            <h4 class="timeline-role">Senior Full Stack Developer</h4>
+            <p class="timeline-company">Freelance / Remote</p>
+            <p class="timeline-duration"><i class="ri-time-line"></i> 2+ Years</p>
+            <p class="timeline-desc">Building end-to-end web applications for international clients. Specialising in Laravel APIs, Vue.js SPAs, and WooCommerce customisations.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-card">
+            <span class="timeline-year">2021 – 2023</span>
+            <h4 class="timeline-role">Full Stack Developer</h4>
+            <p class="timeline-company">TechSoft Solutions</p>
+            <p class="timeline-duration"><i class="ri-time-line"></i> 2 Years</p>
+            <p class="timeline-desc">Led development of a multi-tenant SaaS billing platform serving 200+ clients. Built role-based dashboards, REST APIs, and automated reporting.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-card">
+            <span class="timeline-year">2019 – 2021</span>
+            <h4 class="timeline-role">Junior Web Developer</h4>
+            <p class="timeline-company">CreativeAgency Co.</p>
+            <p class="timeline-duration"><i class="ri-time-line"></i> 2 Years</p>
+            <p class="timeline-desc">Developed WordPress themes and custom PHP solutions for agency clients. Built responsive landing pages and e-commerce stores with WooCommerce.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-card">
+            <span class="timeline-year">2018 – 2019</span>
+            <h4 class="timeline-role">BSc Computer Science</h4>
+            <p class="timeline-company">State University of Technology</p>
+            <p class="timeline-duration"><i class="ri-graduation-cap-line"></i> Graduated</p>
+            <p class="timeline-desc">Graduated with honours, majoring in software engineering. Final year project: a real-time inventory management system using PHP and MySQL.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section padding-gap container-fluid">
+      <div class="row cta-content align-items-center">
+        <div class="col-12 col-lg-7">
+          <h2 class="cta-title mb-4">
+            Ready to Work <span class="highlight">Together?</span>
+          </h2>
+          <p class="cta-subtitle mb-4">
+            I'm currently available for new projects. Let's discuss your idea and build something extraordinary.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="contact.html" class="btn btn-primary btn-glass btn-lg">
+              Start a Project <div class="icon-box"><i class="ri-arrow-right-line"></i></div>
+            </a>
+            <a href="#" class="btn btn-glass btn-lg">
+              Download CV <div class="icon-box"><i class="ri-download-line"></i></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="cta-image">
+            <img src="./assets/images/cta-img.png" alt="Work with F.Tayebee" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="newsletter-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+          </div>
+          <div class="col-12 col-md-4">
+            <form class="newsletter-form">
+              <div class="input-group rounded-pill newsletter-group">
+                <input type="email" class="form-control newsletter-input" placeholder="Enter your email to get updates..." required />
+                <button class="btn newsletter-btn rounded-pill" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-12 col-md-4 mb-4">
+            <div class="whyus-image"><img src="./assets/images/cta-img.png" alt="F.Tayebee" class="img-fluid" /></div>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="row">
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Quick Links</h5>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Me</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Social Media</h5>
+                <ul class="footer-links">
+                  <li><a href="#" target="_blank">Facebook</a></li>
+                  <li><a href="#" target="_blank">LinkedIn</a></li>
+                  <li><a href="#" target="_blank">GitHub</a></li>
+                  <li><a href="mailto:hello@ftayebee.com">Email</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Projects</h5>
+                <ul class="footer-links">
+                  <li><a href="portfolio.html">E-commerce Platform</a></li>
+                  <li><a href="portfolio.html">Billing System</a></li>
+                  <li><a href="portfolio.html">POS System</a></li>
+                  <li><a href="portfolio.html">Portfolio Website</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="copyright-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6"><p class="copyright-text">All rights reserved. Copyright &copy; 2025</p></div>
+          <div class="col-6 text-right">
+            <ul class="copyright-menu">
+              <li><a class="footer-menu-item" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="footer-menu-item" href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/plugins/jquery-3.7.1.min.js"></script>
+  <script src="./assets/plugins/bootstrap-5.3.8/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="assets/plugins/fontawesome-7.1.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max:10, speed:400, scale:1.05, glare:true, "max-glare":0.4 });
+    const cursor = document.querySelector(".webgl-glass-cursor");
+    let mouseX=0, mouseY=0, currentX=0, currentY=0, speed=0.15;
+    document.addEventListener("mousemove", e => { mouseX=e.clientX; mouseY=e.clientY; });
+    function animateCursor() {
+      currentX += (mouseX - currentX) * speed;
+      currentY += (mouseY - currentY) * speed;
+      cursor.style.left = `${currentX}px`;
+      cursor.style.top  = `${currentY}px`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+  </script>
+</body>
+</html>

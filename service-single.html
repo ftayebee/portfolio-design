@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Stack Development — Services — F.Tayebee Portfolio</title>
+  <meta name="description" content="End-to-end full stack web development using Laravel, Vue.js, and modern tools. Scalable, maintainable, production-ready applications." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/plugins/bootstrap-5.3.8/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/plugins/fontawesome-7.1.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/media.css" />
+</head>
+
+<body data-theme="dark-green" data-page="services">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader-logo"><img src="./assets/images/sample-logo.png" alt="Loading" /></div>
+    <div class="page-loader-spinner"></div>
+  </div>
+  <div class="page-transition-overlay" aria-hidden="true"></div>
+
+  <button class="btn-theme-setting" id="openThemePanel" aria-label="Open theme settings"><i class="ri-settings-2-line"></i></button>
+  <div id="theme-backdrop"></div>
+  <aside id="theme-panel">
+    <h3>Theme Settings</h3>
+    <div class="setting-section">
+      <h4>Banner Background</h4>
+      <div class="bg-options">
+        <div class="bg-item" data-bg="./assets/images/banner-bg2.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg3.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg4.png"></div>
+      </div>
+    </div>
+    <div class="setting-section">
+      <h4>Theme Colors</h4>
+      <div class="theme-colors">
+        <div class="color-item" data-theme="dark-green"  style="background:#4caf50"></div>
+        <div class="color-item" data-theme="dark-orange" style="background:#ff987b"></div>
+        <div class="color-item" data-theme="dark-purple" style="background:#7b57ff"></div>
+        <div class="color-item" data-theme="dark-teal"   style="background:#009688"></div>
+      </div>
+    </div>
+  </aside>
+
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <main class="main-container" id="main-content">
+    <div class="webgl-glass-cursor"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="main-navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+        </a>
+        <ul class="navbar-nav mx-auto d-none d-lg-flex">
+          <li class="nav-item"><a class="nav-link nav-home"      href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-about"     href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link nav-services"  href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-contact"   href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex">
+          <a class="btn btn-outline-primary ms-3 d-none d-lg-block btn-main" href="contact.html">Contact Me</a>
+        </div>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
+          <ul class="navbar-nav text-center w-100">
+            <li class="nav-item"><a class="nav-link nav-home"      href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-about"     href="about.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link nav-services"  href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-contact"   href="contact.html">Contact</a></li>
+            <li class="nav-item mt-2"><a class="btn btn-outline-primary w-100" href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SERVICE HERO -->
+    <section class="service-hero-section">
+      <div class="service-hero-content">
+        <div class="service-hero-icon"><i class="ri-code-s-slash-line"></i></div>
+        <span class="section-tag d-inline-flex align-items-center gap-2 mb-3">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> SERVICE DETAIL
+        </span>
+        <h1 class="service-hero-title">
+          Full Stack <span class="highlight">Development</span>
+        </h1>
+        <p class="service-hero-desc">
+          End-to-end web applications built with Laravel, Vue.js, and modern tooling — from database architecture to polished, responsive frontends.
+        </p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-glass">
+            Get a Quote <div class="icon-box"><i class="ri-arrow-right-line"></i></div>
+          </a>
+          <a href="services.html" class="btn btn-sm btn-service-detail">
+            All Services <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+          </a>
+        </div>
+
+        <!-- Floating mini-stats -->
+        <div class="d-flex gap-3 mt-4 flex-wrap">
+          <div style="background:rgba(10,10,10,0.85);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px 20px;backdrop-filter:blur(12px);display:flex;align-items:center;gap:10px;">
+            <i class="ri-briefcase-4-line" style="color:var(--primary-color);font-size:18px;"></i>
+            <div>
+              <div style="font-size:16px;font-weight:700;color:#fff;line-height:1;">50+</div>
+              <div style="font-size:11px;color:rgba(255,255,255,0.45);">Projects Delivered</div>
+            </div>
+          </div>
+          <div style="background:rgba(10,10,10,0.85);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px 20px;backdrop-filter:blur(12px);display:flex;align-items:center;gap:10px;">
+            <i class="ri-star-fill" style="color:#f59e0b;font-size:18px;"></i>
+            <div>
+              <div style="font-size:16px;font-weight:700;color:#fff;line-height:1;">4.9★</div>
+              <div style="font-size:11px;color:rgba(255,255,255,0.45);">Client Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mt-4">
+          <ol class="breadcrumb-nav" style="justify-content:flex-start;">
+            <li><a href="index.html">Home</a></li>
+            <li class="bc-separator"><i class="ri-arrow-right-s-line"></i></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="bc-separator"><i class="ri-arrow-right-s-line"></i></li>
+            <li class="active">Full Stack Development</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- SERVICE OVERVIEW -->
+    <section class="ft-inner-section" style="background:#0b1a0b;">
+      <div class="row g-5 align-items-center">
+        <!-- Image -->
+        <div class="col-12 col-lg-5 scroll-reveal from-left">
+          <div style="border-radius:20px;overflow:hidden;box-shadow:0 0 60px rgba(120,200,65,0.12);">
+            <img src="./assets/images/hacker-working-computer-with-code.jpg" alt="Full Stack Development" class="img-fluid" style="width:100%;display:block;border-radius:20px;" loading="lazy" />
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="col-12 col-lg-7">
+          <span class="section-tag d-block mb-2 scroll-reveal from-bottom">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> WHAT'S INCLUDED
+          </span>
+          <h2 class="section-title scroll-reveal from-bottom">
+            What You <span class="highlight">Get</span>
+          </h2>
+          <p class="section-subtitle mb-4 scroll-reveal from-bottom" style="font-family:var(--p-font);">
+            I handle every layer of your application — from schema design and server-side logic through to the final pixel of the user interface. You get a complete, tested, and documented product.
+          </p>
+          <ul class="deliverables-list scroll-reveal from-bottom">
+            <li><i class="ri-check-line"></i> Custom web application architecture &amp; database design</li>
+            <li><i class="ri-check-line"></i> RESTful API development with full documentation</li>
+            <li><i class="ri-check-line"></i> Vue.js / JavaScript SPA frontend</li>
+            <li><i class="ri-check-line"></i> User authentication &amp; role-based access control</li>
+            <li><i class="ri-check-line"></i> Responsive, cross-browser compatible UI</li>
+            <li><i class="ri-check-line"></i> Automated tests &amp; code quality review</li>
+            <li><i class="ri-check-line"></i> Deployment, CI/CD pipeline setup</li>
+            <li><i class="ri-check-line"></i> 30-day post-launch support included</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE FEATURES -->
+    <section class="ft-inner-section bg-alt-1">
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> KEY FEATURES
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          Why This <span class="highlight">Service</span>
+        </h2>
+      </div>
+      <div class="service-features-grid">
+        <div class="benifit-item scroll-reveal from-bottom" data-tilt>
+          <div class="icon-box"><i class="ri-smartphone-line"></i></div>
+          <h4>Fully Responsive</h4>
+          <p>Every app I build works flawlessly on all screen sizes — desktop, tablet, and mobile — without compromise.</p>
+        </div>
+        <div class="benifit-item scroll-reveal from-bottom" data-tilt>
+          <div class="icon-box"><i class="ri-search-2-line"></i></div>
+          <h4>SEO Optimised</h4>
+          <p>Clean semantic markup, fast load speeds, and structured data to give your application the best possible search rankings.</p>
+        </div>
+        <div class="benifit-item scroll-reveal from-bottom" data-tilt>
+          <div class="icon-box"><i class="ri-speed-up-line"></i></div>
+          <h4>High Performance</h4>
+          <p>Lazy loading, query optimisation, Redis caching, and CDN integration to keep your app fast under load.</p>
+        </div>
+        <div class="benifit-item scroll-reveal from-bottom" data-tilt>
+          <div class="icon-box"><i class="ri-shield-check-line"></i></div>
+          <h4>Secure by Default</h4>
+          <p>CSRF protection, input sanitisation, prepared statements, and OWASP Top 10 mitigation built into every project.</p>
+        </div>
+        <div class="benifit-item scroll-reveal from-bottom" data-tilt>
+          <div class="icon-box"><i class="ri-code-box-line"></i></div>
+          <h4>Clean Code</h4>
+          <p>SOLID principles, PSR standards, and documented code that your future team will actually enjoy maintaining.</p>
+        </div>
+        <div class="benifit-item scroll-reveal from-bottom" data-tilt>
+          <div class="icon-box"><i class="ri-customer-service-2-line"></i></div>
+          <h4>Ongoing Support</h4>
+          <p>Post-launch support is included as standard, with optional retainer plans for continued feature development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS STEPPER -->
+    <section class="ft-inner-section bg-alt-3">
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> HOW IT WORKS
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          The <span class="highlight">Process</span>
+        </h2>
+        <p class="section-subtitle mx-auto scroll-reveal from-bottom" style="max-width:500px;">
+          A clear, collaborative workflow from first conversation to live deployment.
+        </p>
+      </div>
+      <div class="process-steps scroll-reveal from-bottom">
+        <div class="process-step">
+          <img src="./assets/images/discovery.png" alt="Discovery" class="process-step-image" loading="lazy" />
+          <h5 class="process-step-title">Discovery</h5>
+          <p class="process-step-desc">Define goals, scope, and technical requirements together.</p>
+        </div>
+        <div class="process-step">
+          <img src="./assets/images/planning.png" alt="Planning" class="process-step-image" loading="lazy" />
+          <h5 class="process-step-title">Planning</h5>
+          <p class="process-step-desc">Architecture design, wireframes, sprint schedule, and timeline.</p>
+        </div>
+        <div class="process-step">
+          <img src="./assets/images/development.png" alt="Development" class="process-step-image" loading="lazy" />
+          <h5 class="process-step-title">Development</h5>
+          <p class="process-step-desc">Iterative builds with regular demos and feedback loops.</p>
+        </div>
+        <div class="process-step">
+          <img src="./assets/images/launch.png" alt="Launch" class="process-step-image" loading="lazy" />
+          <h5 class="process-step-title">Launch &amp; Support</h5>
+          <p class="process-step-desc">Deployment, handover documentation, and 30-day support window.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH USED -->
+    <section class="ft-inner-section bg-alt-1">
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-lg-4 scroll-reveal from-left">
+          <span class="section-tag d-block mb-2">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> TECH STACK
+          </span>
+          <h2 class="section-title mb-3">Tools Used For <span class="highlight">This Service</span></h2>
+          <p class="section-subtitle" style="font-family:var(--p-font);">
+            The specific technologies I use when delivering a full stack web application project.
+          </p>
+        </div>
+        <div class="col-12 col-lg-8 scroll-reveal from-right">
+          <div class="tech-badges-wrap">
+            <span class="tech-badge"><img src="./assets/images/tech/laravel.png" alt="Laravel" loading="lazy" /> Laravel</span>
+            <span class="tech-badge"><img src="./assets/images/tech/vue.png"     alt="Vue.js"  loading="lazy" /> Vue.js</span>
+            <span class="tech-badge"><img src="./assets/images/tech/php.png"     alt="PHP"     loading="lazy" /> PHP 8</span>
+            <span class="tech-badge"><img src="./assets/images/tech/js.png"      alt="JS"      loading="lazy" /> JavaScript</span>
+            <span class="tech-badge"><img src="./assets/images/tech/tailwind.png" alt="Tailwind" loading="lazy" /> Tailwind CSS</span>
+            <span class="tech-badge"><img src="./assets/images/tech/bootstrap.png" alt="Bootstrap" loading="lazy" /> Bootstrap 5</span>
+            <span class="tech-badge"><i class="ri-database-line" style="font-size:18px;color:var(--primary-color);"></i> MySQL</span>
+            <span class="tech-badge"><i class="ri-git-branch-line" style="font-size:18px;color:var(--primary-color);"></i> Git / GitHub</span>
+            <span class="tech-badge"><i class="ri-server-line" style="font-size:18px;color:var(--primary-color);"></i> Linux / cPanel</span>
+            <span class="tech-badge"><i class="ri-cloud-line" style="font-size:18px;color:var(--primary-color);"></i> AWS / DigitalOcean</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="ft-inner-section bg-alt-2">
+      <div class="row g-5">
+        <div class="col-12 col-lg-4 scroll-reveal from-left">
+          <span class="section-tag d-block mb-2">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> FAQ
+          </span>
+          <h2 class="section-title mb-3">Common <span class="highlight">Questions</span></h2>
+          <p class="section-subtitle" style="font-family:var(--p-font);">Everything you need to know before we start working together.</p>
+        </div>
+        <div class="col-12 col-lg-8 scroll-reveal from-right">
+          <div class="accordion glass-accordion" id="serviceFaq">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf1">
+                  How long does a typical full stack project take?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="sf1" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
+                <div class="accordion-body">Depending on complexity, most full stack projects take between 4 and 12 weeks. Simple web apps can be done in 3–4 weeks, while feature-rich SaaS products may take 3–4 months. I'll give you a precise estimate after the discovery call.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf2">
+                  Do you provide source code and documentation?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="sf2" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
+                <div class="accordion-body">Yes — you receive 100% ownership of the source code, hosted in a private Git repository. Full technical documentation, API references, and a handover guide are included with every project.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf3">
+                  Can you work with my existing codebase?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="sf3" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
+                <div class="accordion-body">Absolutely. I regularly take on legacy PHP / Laravel projects for refactoring, feature additions, or performance overhauls. I'll audit the codebase first and provide a realistic scope before we proceed.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf4">
+                  What's included in the 30-day post-launch support?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="sf4" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
+                <div class="accordion-body">Bug fixes, minor tweaks, and deployment issues are all covered at no extra cost for 30 days after launch. New features or significant scope changes are handled under a separate agreement.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf5">
+                  Do you handle hosting and server setup?
+                  <i class="ri-add-line acc-icon"></i>
+                </button>
+              </h2>
+              <div id="sf5" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
+                <div class="accordion-body">Yes. I can set up and configure your server on DigitalOcean, AWS, or cPanel hosting, including SSL certificates, environment configuration, and automated backups. Server costs are billed separately.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED PROJECTS -->
+    <section class="ft-inner-section bg-alt-1">
+      <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
+        <div>
+          <span class="section-tag d-block mb-2 scroll-reveal from-left">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> RELATED WORK
+          </span>
+          <h2 class="section-title scroll-reveal from-left">
+            Projects Built <span class="highlight">With This</span>
+          </h2>
+        </div>
+        <a href="portfolio.html" class="btn btn-sm btn-service-detail scroll-reveal from-right">
+          See All Projects <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+        </a>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-4 scroll-reveal from-bottom">
+          <a href="project-single.html" class="portfolio-card d-block">
+            <img src="./assets/images/hacker-working-computer-with-code.jpg" alt="E-commerce Platform" loading="lazy" />
+            <div class="portfolio-card-badge">Laravel / Vue.js</div>
+            <div class="portfolio-card-overlay">
+              <span class="portfolio-card-category">Full Stack</span>
+              <h4 class="portfolio-card-title">Multi-vendor E-commerce Platform</h4>
+              <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-4 scroll-reveal from-bottom">
+          <a href="project-single.html" class="portfolio-card d-block">
+            <img src="./assets/images/about-img.jpg" alt="SaaS Billing System" loading="lazy" />
+            <div class="portfolio-card-badge">Laravel API</div>
+            <div class="portfolio-card-overlay">
+              <span class="portfolio-card-category">Full Stack</span>
+              <h4 class="portfolio-card-title">SaaS Billing &amp; Subscription System</h4>
+              <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-4 scroll-reveal from-bottom">
+          <a href="project-single.html" class="portfolio-card d-block">
+            <img src="./assets/images/why-me.jpg" alt="Admin Dashboard" loading="lazy" />
+            <div class="portfolio-card-badge">Vue.js SPA</div>
+            <div class="portfolio-card-overlay">
+              <span class="portfolio-card-category">Frontend</span>
+              <h4 class="portfolio-card-title">Real-time Admin Dashboard</h4>
+              <span class="portfolio-card-btn">View Case Study <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="ft-inner-section bg-alt-2">
+      <div class="scroll-reveal from-bottom">
+        <div class="testimonial-large">
+          <img src="./assets/images/quotation.svg" alt="" class="testimonial-large .quotation-mark" style="position:absolute;top:32px;right:32px;opacity:0.12;width:60px;" />
+          <blockquote>
+            "Working with F.Tayebee was a game-changer for our platform. He took our messy legacy codebase, refactored it completely, and delivered a modern Laravel + Vue.js system in just 6 weeks. The code quality and documentation are exceptional — our internal team had no trouble taking it over."
+          </blockquote>
+          <div class="testimonial-large-author">
+            <img src="./assets/images/avatar-1.jpg" alt="John Doe" loading="lazy" />
+            <div>
+              <p class="testimonial-large-author-name">John Doe</p>
+              <p class="testimonial-large-author-role">CEO, TechCorp Inc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CTA FORM -->
+    <section class="ft-inner-section bg-alt-3">
+      <div class="inline-cta-section scroll-reveal from-bottom">
+        <!-- Left: pitch -->
+        <div>
+          <span class="section-tag d-block mb-3">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> START TODAY
+          </span>
+          <h2 class="inline-cta-heading">
+            Let's Build Something <span class="highlight">Great</span>
+          </h2>
+          <p class="inline-cta-desc">
+            Tell me about your project in the form and I'll get back to you within 24 hours with a detailed proposal and timeline.
+          </p>
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(120,200,65,0.12);border:1px solid rgba(120,200,65,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="ri-check-line" style="color:var(--primary-color);"></i>
+              </div>
+              <span style="font-size:15px;color:rgba(255,255,255,0.7);">Free discovery call included</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(120,200,65,0.12);border:1px solid rgba(120,200,65,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="ri-check-line" style="color:var(--primary-color);"></i>
+              </div>
+              <span style="font-size:15px;color:rgba(255,255,255,0.7);">No obligation quote</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(120,200,65,0.12);border:1px solid rgba(120,200,65,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="ri-check-line" style="color:var(--primary-color);"></i>
+              </div>
+              <span style="font-size:15px;color:rgba(255,255,255,0.7);">Response within 24 hours</span>
+            </div>
+          </div>
+        </div>
+        <!-- Right: mini form -->
+        <div>
+          <form class="ft-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="cta-name">Your Name <span style="color:#ef4444">*</span></label>
+              <input type="text" id="cta-name" class="form-input" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cta-email">Email Address <span style="color:#ef4444">*</span></label>
+              <input type="email" id="cta-email" class="form-input" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cta-budget">Budget Range</label>
+              <select id="cta-budget" class="form-select">
+                <option value="">Select budget…</option>
+                <option>Under $1,000</option>
+                <option>$1,000 – $5,000</option>
+                <option>$5,000 – $15,000</option>
+                <option>$15,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cta-message">Brief Project Description <span style="color:#ef4444">*</span></label>
+              <textarea id="cta-message" class="form-textarea" rows="4" placeholder="Describe what you're looking to build…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-glass w-100" style="justify-content:center;">
+              Request a Quote <div class="icon-box ms-2"><i class="ri-send-plane-line"></i></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="newsletter-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+          </div>
+          <div class="col-12 col-md-4">
+            <form class="newsletter-form">
+              <div class="input-group rounded-pill newsletter-group">
+                <input type="email" class="form-control newsletter-input" placeholder="Enter your email to get updates..." required />
+                <button class="btn newsletter-btn rounded-pill" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-12 col-md-4 mb-4"><div class="whyus-image"><img src="./assets/images/cta-img.png" alt="F.Tayebee" class="img-fluid" /></div></div>
+          <div class="col-12 col-md-8">
+            <div class="row">
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Quick Links</h5>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Me</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Social Media</h5>
+                <ul class="footer-links">
+                  <li><a href="#" target="_blank">Facebook</a></li>
+                  <li><a href="#" target="_blank">LinkedIn</a></li>
+                  <li><a href="#" target="_blank">GitHub</a></li>
+                  <li><a href="mailto:hello@ftayebee.com">Email</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Projects</h5>
+                <ul class="footer-links">
+                  <li><a href="portfolio.html">E-commerce Platform</a></li>
+                  <li><a href="portfolio.html">Billing System</a></li>
+                  <li><a href="portfolio.html">POS System</a></li>
+                  <li><a href="portfolio.html">Portfolio Website</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="copyright-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6"><p class="copyright-text">All rights reserved. Copyright &copy; 2025</p></div>
+          <div class="col-6 text-right">
+            <ul class="copyright-menu">
+              <li><a class="footer-menu-item" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="footer-menu-item" href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/plugins/jquery-3.7.1.min.js"></script>
+  <script src="./assets/plugins/bootstrap-5.3.8/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="assets/plugins/fontawesome-7.1.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max:10, speed:400, scale:1.05, glare:true, "max-glare":0.4 });
+    const cursor = document.querySelector(".webgl-glass-cursor");
+    let mouseX=0, mouseY=0, currentX=0, currentY=0, speed=0.15;
+    document.addEventListener("mousemove", e => { mouseX=e.clientX; mouseY=e.clientY; });
+    function animateCursor() {
+      currentX += (mouseX - currentX) * speed; currentY += (mouseY - currentY) * speed;
+      cursor.style.left = `${currentX}px`; cursor.style.top = `${currentY}px`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+  </script>
+</body>
+</html>

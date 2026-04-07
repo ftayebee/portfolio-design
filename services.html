@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — F.Tayebee Portfolio</title>
+  <meta name="description" content="Full-stack web development services including Laravel, Vue.js, WordPress, E-commerce, API development and more." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/plugins/bootstrap-5.3.8/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/plugins/fontawesome-7.1.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/media.css" />
+</head>
+
+<body data-theme="dark-green" data-page="services">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader-logo"><img src="./assets/images/sample-logo.png" alt="Loading" /></div>
+    <div class="page-loader-spinner"></div>
+  </div>
+  <div class="page-transition-overlay" aria-hidden="true"></div>
+
+  <button class="btn-theme-setting" id="openThemePanel" aria-label="Open theme settings"><i class="ri-settings-2-line"></i></button>
+  <div id="theme-backdrop"></div>
+  <aside id="theme-panel">
+    <h3>Theme Settings</h3>
+    <div class="setting-section">
+      <h4>Banner Background</h4>
+      <div class="bg-options">
+        <div class="bg-item" data-bg="./assets/images/banner-bg2.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg3.png"></div>
+        <div class="bg-item" data-bg="./assets/images/banner-bg4.png"></div>
+      </div>
+    </div>
+    <div class="setting-section">
+      <h4>Theme Colors</h4>
+      <div class="theme-colors">
+        <div class="color-item" data-theme="dark-green"  style="background:#4caf50"></div>
+        <div class="color-item" data-theme="dark-orange" style="background:#ff987b"></div>
+        <div class="color-item" data-theme="dark-purple" style="background:#7b57ff"></div>
+        <div class="color-item" data-theme="dark-teal"   style="background:#009688"></div>
+      </div>
+    </div>
+  </aside>
+
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+  <main class="main-container" id="main-content">
+    <div class="webgl-glass-cursor"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="main-navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+        </a>
+        <ul class="navbar-nav mx-auto d-none d-lg-flex">
+          <li class="nav-item"><a class="nav-link nav-home"      href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-about"     href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link nav-services"  href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-contact"   href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex">
+          <a class="btn btn-outline-primary ms-3 d-none d-lg-block btn-main" href="contact.html">Contact Me</a>
+        </div>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
+          <ul class="navbar-nav text-center w-100">
+            <li class="nav-item"><a class="nav-link nav-home"      href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-about"     href="about.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link nav-services"  href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-contact"   href="contact.html">Contact</a></li>
+            <li class="nav-item mt-2"><a class="btn btn-outline-primary w-100" href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero-section">
+      <div class="page-hero-content">
+        <span class="section-tag d-inline-flex align-items-center gap-2 mb-2">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> WHAT I BUILD
+        </span>
+        <h1 class="page-hero-title">Services <span class="highlight">Offered</span></h1>
+        <p class="mb-4" style="font-family:var(--p-font);font-size:17px;color:rgba(255,255,255,0.65);">
+          Scalable, modern web solutions tailored to your business goals
+        </p>
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="bc-separator"><i class="ri-arrow-right-s-line"></i></li>
+            <li class="active">Services</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ALL SERVICES GRID -->
+    <section class="services-section container-fluid padding-gap" style="background:#0b1a0b;">
+      <span class="section-tag text-center d-block scroll-reveal from-bottom">
+        <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> WHAT I DO
+      </span>
+      <h2 class="section-title text-center scroll-reveal from-bottom">
+        All <span class="highlight">Services</span>
+      </h2>
+      <p class="section-subtitle m-auto text-center scroll-reveal from-bottom" style="max-width:560px;">
+        High-quality development services tailored to bring your digital ideas to life through modern, scalable, and user-centred solutions.
+      </p>
+
+      <div class="services-grid mt-5">
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
+          <div class="service-header d-flex justify-content-between align-items-center">
+            <div class="service-icon"><i class="ri-code-s-slash-line"></i></div>
+            <div class="btn-container">
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="service-content">
+            <h4 class="mt-3">Full Stack Development</h4>
+            <p>End-to-end development using Laravel, Vue.js, and modern tools to build complete, production-ready web applications.</p>
+            <ul class="deliverables-list mt-2" style="font-size:13px;">
+              <li><i class="ri-check-line"></i> Custom web application architecture</li>
+              <li><i class="ri-check-line"></i> Database design &amp; optimisation</li>
+              <li><i class="ri-check-line"></i> Deployment &amp; CI/CD setup</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
+          <div class="service-header d-flex justify-content-between align-items-center">
+            <div class="service-icon"><i class="ri-database-2-line"></i></div>
+            <div class="btn-container">
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="service-content">
+            <h4 class="mt-3">API &amp; Backend Development</h4>
+            <p>Secure, scalable REST APIs, database architecture, authentication systems, and backend business logic using Laravel &amp; PHP.</p>
+            <ul class="deliverables-list mt-2" style="font-size:13px;">
+              <li><i class="ri-check-line"></i> RESTful API design &amp; documentation</li>
+              <li><i class="ri-check-line"></i> JWT / OAuth authentication</li>
+              <li><i class="ri-check-line"></i> Third-party API integrations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
+          <div class="service-header d-flex justify-content-between align-items-center">
+            <div class="service-icon"><i class="ri-layout-4-line"></i></div>
+            <div class="btn-container">
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="service-content">
+            <h4 class="mt-3">Frontend Engineering</h4>
+            <p>Beautiful, fast, responsive UI using Vue.js, Tailwind CSS, Bootstrap, and modern JavaScript patterns.</p>
+            <ul class="deliverables-list mt-2" style="font-size:13px;">
+              <li><i class="ri-check-line"></i> Component-based Vue.js SPAs</li>
+              <li><i class="ri-check-line"></i> Pixel-perfect responsive layouts</li>
+              <li><i class="ri-check-line"></i> Animation &amp; interaction design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
+          <div class="service-header d-flex justify-content-between align-items-center">
+            <div class="service-icon"><i class="ri-speed-up-line"></i></div>
+            <div class="btn-container">
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="service-content">
+            <h4 class="mt-3">Performance Optimisation</h4>
+            <p>Speed, SEO, caching, and code improvements for a smoother, faster, and higher-ranking web experience.</p>
+            <ul class="deliverables-list mt-2" style="font-size:13px;">
+              <li><i class="ri-check-line"></i> Core Web Vitals improvement</li>
+              <li><i class="ri-check-line"></i> Image &amp; asset optimisation</li>
+              <li><i class="ri-check-line"></i> Lighthouse score audit &amp; fixes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
+          <div class="service-header d-flex justify-content-between align-items-center">
+            <div class="service-icon"><i class="ri-shopping-cart-2-line"></i></div>
+            <div class="btn-container">
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="service-content">
+            <h4 class="mt-3">E-commerce Development</h4>
+            <p>High-quality Laravel / Vue.js powered e-commerce systems with secure payments and product management.</p>
+            <ul class="deliverables-list mt-2" style="font-size:13px;">
+              <li><i class="ri-check-line"></i> Custom cart &amp; checkout flow</li>
+              <li><i class="ri-check-line"></i> Payment gateway integration</li>
+              <li><i class="ri-check-line"></i> Inventory &amp; order management</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
+          <div class="service-header d-flex justify-content-between align-items-center">
+            <div class="service-icon"><i class="ri-wordpress-line"></i></div>
+            <div class="btn-container">
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="service-content">
+            <h4 class="mt-3">WordPress Development</h4>
+            <p>Custom WordPress websites, themes, plugins, and CMS solutions optimised for performance and SEO.</p>
+            <ul class="deliverables-list mt-2" style="font-size:13px;">
+              <li><i class="ri-check-line"></i> Custom theme development</li>
+              <li><i class="ri-check-line"></i> Plugin customisation &amp; creation</li>
+              <li><i class="ri-check-line"></i> WooCommerce integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
+          <div class="service-header d-flex justify-content-between align-items-center">
+            <div class="service-icon"><i class="ri-tools-line"></i></div>
+            <div class="btn-container">
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="service-content">
+            <h4 class="mt-3">Maintenance &amp; Support</h4>
+            <p>Bug fixes, updates, feature enhancements, and long-term technical support for your existing applications.</p>
+            <ul class="deliverables-list mt-2" style="font-size:13px;">
+              <li><i class="ri-check-line"></i> Monthly retainer plans available</li>
+              <li><i class="ri-check-line"></i> Security patches &amp; updates</li>
+              <li><i class="ri-check-line"></i> Performance monitoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
+          <div class="service-header d-flex justify-content-between align-items-center">
+            <div class="service-icon"><i class="ri-store-2-line"></i></div>
+            <div class="btn-container">
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="service-content">
+            <h4 class="mt-3">WooCommerce Development</h4>
+            <p>Fully customised WooCommerce stores with product management, secure checkout, and high-speed optimisation.</p>
+            <ul class="deliverables-list mt-2" style="font-size:13px;">
+              <li><i class="ri-check-line"></i> Custom storefront design</li>
+              <li><i class="ri-check-line"></i> Multi-currency &amp; multi-language</li>
+              <li><i class="ri-check-line"></i> Shipping &amp; tax automation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW I WORK — DEVELOPMENT PROCESS (reused) -->
+    <section class="dev-process-section container-fluid padding-gap" style="background:var(--process-background-color);">
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> MY PROCESS
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          How I <span class="highlight">Work</span>
+        </h2>
+        <p class="section-subtitle mx-auto scroll-reveal from-bottom" style="max-width:520px;">
+          A structured, transparent process that keeps you informed and in control from day one to launch.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="benifit-item h-100">
+            <div class="icon-box"><i class="ri-search-eye-line"></i></div>
+            <h4>01. Discovery</h4>
+            <p>We analyse your goals, define scope, identify requirements, and agree on a realistic roadmap before any code is written.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="benifit-item h-100">
+            <div class="icon-box"><i class="ri-draft-line"></i></div>
+            <h4>02. Planning</h4>
+            <p>I create detailed wireframes, architecture diagrams, and a sprint plan so both of us can track progress clearly.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="benifit-item h-100">
+            <div class="icon-box"><i class="ri-code-box-line"></i></div>
+            <h4>03. Development</h4>
+            <p>Clean, tested code is written in sprints with regular check-ins. You have visibility into progress every step of the way.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="benifit-item h-100">
+            <div class="icon-box"><i class="ri-rocket-2-line"></i></div>
+            <h4>04. Launch &amp; Support</h4>
+            <p>Full deployment, post-launch testing, documentation handover, and optional ongoing support retainer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK TABS -->
+    <section class="ft-inner-section bg-alt-1">
+      <div class="text-center mb-5">
+        <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
+          <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> TECH STACK
+        </span>
+        <h2 class="section-title scroll-reveal from-bottom">
+          Tools I <span class="highlight">Use</span>
+        </h2>
+      </div>
+      <div class="tab-nav scroll-reveal from-bottom" id="techTabNav" role="tablist">
+        <button class="tab-nav-btn active" data-tab="frontend"  role="tab" aria-selected="true">Frontend</button>
+        <button class="tab-nav-btn"        data-tab="backend"   role="tab" aria-selected="false">Backend</button>
+        <button class="tab-nav-btn"        data-tab="cms"       role="tab" aria-selected="false">CMS</button>
+        <button class="tab-nav-btn"        data-tab="tools"     role="tab" aria-selected="false">Tools &amp; DevOps</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-frontend">
+        <div class="tech-grid justify-content-center">
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/html.png"      alt="HTML5"      loading="lazy" /><span>HTML5</span></div>
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/css.png"       alt="CSS3"       loading="lazy" /><span>CSS3</span></div>
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/js.png"        alt="JavaScript" loading="lazy" /><span>JavaScript</span></div>
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/vue.png"       alt="Vue.js"     loading="lazy" /><span>Vue.js</span></div>
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/bootstrap.png" alt="Bootstrap"  loading="lazy" /><span>Bootstrap</span></div>
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/tailwind.png"  alt="Tailwind"   loading="lazy" /><span>Tailwind</span></div>
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/jquery.png"    alt="jQuery"     loading="lazy" /><span>jQuery</span></div>
+        </div>
+      </div>
+      <div class="tab-panel" id="tab-backend">
+        <div class="tech-grid justify-content-center">
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/php.png"     alt="PHP"     loading="lazy" /><span>PHP</span></div>
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/laravel.png" alt="Laravel" loading="lazy" /><span>Laravel</span></div>
+        </div>
+      </div>
+      <div class="tab-panel" id="tab-cms">
+        <div class="tech-grid justify-content-center">
+          <div class="tech-grid-item" data-tilt><img src="./assets/images/tech/wordpress.png" alt="WordPress" loading="lazy" /><span>WordPress</span></div>
+        </div>
+      </div>
+      <div class="tab-panel" id="tab-tools">
+        <div class="tech-badges-wrap justify-content-center">
+          <span class="tech-badge"><i class="ri-git-branch-line" style="font-size:18px;color:var(--primary-color);"></i> Git &amp; GitHub</span>
+          <span class="tech-badge"><i class="ri-server-line"     style="font-size:18px;color:var(--primary-color);"></i> Linux / cPanel</span>
+          <span class="tech-badge"><i class="ri-database-line"   style="font-size:18px;color:var(--primary-color);"></i> MySQL / MariaDB</span>
+          <span class="tech-badge"><i class="ri-terminal-line"   style="font-size:18px;color:var(--primary-color);"></i> Composer / NPM</span>
+          <span class="tech-badge"><i class="ri-cloud-line"      style="font-size:18px;color:var(--primary-color);"></i> AWS / DigitalOcean</span>
+          <span class="tech-badge"><i class="ri-bug-line"        style="font-size:18px;color:var(--primary-color);"></i> Postman / Insomnia</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TEASER -->
+    <section class="pricing-section container-fluid padding-gap">
+      <div class="section-header d-flex flex-row align-items-center justify-content-between mb-5">
+        <div>
+          <span class="section-tag d-block scroll-reveal from-left">
+            <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> PRICING
+          </span>
+          <h2 class="section-title text-left scroll-reveal from-left">
+            Choose a <span class="highlight">Plan</span> That Fits
+          </h2>
+        </div>
+        <p class="section-subtitle text-left scroll-reveal from-right" style="max-width:340px;">
+          Flexible retainer plans for ongoing support, or fixed-scope pricing for project work.
+        </p>
+      </div>
+      <div class="section-content pricing-grid">
+        <div class="pricing-card scroll-reveal from-left" data-tilt>
+          <div class="pricing-content">
+            <div class="pricing-badge">Basic</div>
+            <h3 class="pricing-amount">$19 <span>/mo</span></h3>
+            <ul class="pricing-features">
+              <li><i class="ri-check-line check-mark"></i> Basic Website Support</li>
+              <li><i class="ri-check-line check-mark"></i> UI/UX Fixes (HTML/CSS/JS)</li>
+              <li><i class="ri-check-line check-mark"></i> Plugin / Package Updates</li>
+              <li><i class="ri-check-line check-mark"></i> Monthly Performance Check</li>
+              <li class="off"><i class="ri-close-line"></i> API Development</li>
+              <li class="off"><i class="ri-close-line"></i> Custom Backend Logic</li>
+            </ul>
+            <button class="pricing-btn">Get Started</button>
+          </div>
+        </div>
+        <div class="pricing-card scroll-reveal from-left" data-tilt>
+          <div class="pricing-content">
+            <div class="pricing-badge">Standard</div>
+            <h3 class="pricing-amount">$39 <span>/mo</span></h3>
+            <ul class="pricing-features">
+              <li><i class="ri-check-line check-mark"></i> Frontend Development</li>
+              <li><i class="ri-check-line check-mark"></i> Vue.js Components</li>
+              <li><i class="ri-check-line check-mark"></i> Responsive UI Fixes</li>
+              <li><i class="ri-check-line check-mark"></i> Landing Pages + UI Sections</li>
+              <li><i class="ri-check-line check-mark"></i> Optimisation &amp; Speed Boost</li>
+              <li class="off"><i class="ri-close-line"></i> API Integrations</li>
+            </ul>
+            <button class="pricing-btn">Choose Standard</button>
+          </div>
+        </div>
+        <div class="pricing-card featured scroll-reveal from-right" data-tilt>
+          <span class="recommend-tag">recommended</span>
+          <div class="pricing-content">
+            <div class="pricing-badge">Professional</div>
+            <h3 class="pricing-amount">$79 <span>/mo</span></h3>
+            <ul class="pricing-features">
+              <li><i class="ri-check-line check-mark"></i> Full Stack Development</li>
+              <li><i class="ri-check-line check-mark"></i> REST API Development</li>
+              <li><i class="ri-check-line check-mark"></i> Database + Backend Logic</li>
+              <li><i class="ri-check-line check-mark"></i> Vue.js SPA Features</li>
+              <li><i class="ri-check-line check-mark"></i> Ecommerce (Laravel/WooCommerce)</li>
+              <li><i class="ri-check-line check-mark"></i> Monthly Performance Optimisation</li>
+            </ul>
+            <button class="pricing-btn active">Choose Pro</button>
+          </div>
+        </div>
+        <div class="pricing-card scroll-reveal from-right" data-tilt>
+          <div class="pricing-content">
+            <div class="pricing-badge">Enterprise</div>
+            <h3 class="pricing-amount">$149 <span>/mo</span></h3>
+            <ul class="pricing-features">
+              <li><i class="ri-check-line check-mark"></i> Full System Architecture</li>
+              <li><i class="ri-check-line check-mark"></i> Advanced API + Microservices</li>
+              <li><i class="ri-check-line check-mark"></i> WordPress + Custom Plugins</li>
+              <li><i class="ri-check-line check-mark"></i> Large-Scale Ecommerce</li>
+              <li><i class="ri-check-line check-mark"></i> Multi-role Admin Panels</li>
+              <li><i class="ri-check-line check-mark"></i> 24/7 Dedicated Support</li>
+            </ul>
+            <button class="pricing-btn">Contact Sales</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5 scroll-reveal from-bottom">
+        <p style="font-family:var(--p-font);color:rgba(255,255,255,0.55);font-size:16px;margin-bottom:16px;">Need something that doesn't fit a plan?</p>
+        <a href="contact.html" class="btn btn-sm btn-service-detail">
+          Request a Custom Quote <span class="btn-service-icon"><i class="ri-arrow-right-line"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES MARQUEE -->
+    <section class="industries-section container-fluid padding-gap">
+      <h2 class="section-title mb-4 text-center">
+        Industries <span class="highlight">Served</span>
+      </h2>
+      <div class="industries-marquee">
+        <div class="marquee">
+          <div class="marquee-content">
+            <div class="industry-item"><div class="icon-box"><i class="ri-shopping-bag-line"></i></div><span>E-Commerce</span></div>
+            <div class="industry-item"><div class="icon-box"><i class="ri-cloud-line"></i></div><span>SaaS Platforms</span></div>
+            <div class="industry-item"><div class="icon-box"><i class="ri-heart-pulse-line"></i></div><span>Healthcare</span></div>
+            <div class="industry-item"><div class="icon-box"><i class="ri-money-dollar-circle-line"></i></div><span>Finance &amp; FinTech</span></div>
+            <div class="industry-item"><div class="icon-box"><i class="ri-book-line"></i></div><span>Education</span></div>
+            <div class="industry-item"><div class="icon-box"><i class="ri-building-2-line"></i></div><span>Real Estate</span></div>
+            <div class="industry-item"><div class="icon-box"><i class="ri-truck-line"></i></div><span>Logistics</span></div>
+            <div class="industry-item"><div class="icon-box"><i class="ri-megaphone-line"></i></div><span>Digital Marketing</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section padding-gap container-fluid">
+      <div class="row cta-content align-items-center">
+        <div class="col-12 col-lg-7">
+          <h2 class="cta-title mb-4">
+            Got a Project <span class="highlight">In Mind?</span>
+          </h2>
+          <p class="cta-subtitle mb-4">
+            Let's talk about your requirements and build the right solution together. From simple websites to complex SaaS platforms — I've got you covered.
+          </p>
+          <a href="contact.html" class="btn btn-primary btn-glass btn-lg">
+            Start a Project <div class="icon-box"><i class="ri-arrow-right-line"></i></div>
+          </a>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="cta-image"><img src="./assets/images/cta-img.png" alt="Start a project" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="newsletter-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <img src="./assets/images/sample-logo.png" alt="F.Tayebee Logo" height="60" class="d-inline-block align-top" />
+          </div>
+          <div class="col-12 col-md-4">
+            <form class="newsletter-form">
+              <div class="input-group rounded-pill newsletter-group">
+                <input type="email" class="form-control newsletter-input" placeholder="Enter your email to get updates..." required />
+                <button class="btn newsletter-btn rounded-pill" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-12 col-md-4 mb-4"><div class="whyus-image"><img src="./assets/images/cta-img.png" alt="F.Tayebee" class="img-fluid" /></div></div>
+          <div class="col-12 col-md-8">
+            <div class="row">
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Quick Links</h5>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Me</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Social Media</h5>
+                <ul class="footer-links">
+                  <li><a href="#" target="_blank">Facebook</a></li>
+                  <li><a href="#" target="_blank">LinkedIn</a></li>
+                  <li><a href="#" target="_blank">GitHub</a></li>
+                  <li><a href="mailto:hello@ftayebee.com">Email</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Projects</h5>
+                <ul class="footer-links">
+                  <li><a href="portfolio.html">E-commerce Platform</a></li>
+                  <li><a href="portfolio.html">Billing System</a></li>
+                  <li><a href="portfolio.html">POS System</a></li>
+                  <li><a href="portfolio.html">Portfolio Website</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="copyright-widget container-fluid padding-gap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6"><p class="copyright-text">All rights reserved. Copyright &copy; 2025</p></div>
+          <div class="col-6 text-right">
+            <ul class="copyright-menu">
+              <li><a class="footer-menu-item" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="footer-menu-item" href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/plugins/jquery-3.7.1.min.js"></script>
+  <script src="./assets/plugins/bootstrap-5.3.8/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="assets/plugins/fontawesome-7.1.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max:10, speed:400, scale:1.05, glare:true, "max-glare":0.4 });
+
+    // Tab navigation
+    document.querySelectorAll('.tab-nav-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab-nav-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        this.setAttribute('aria-selected','true');
+        var tabId = 'tab-' + this.dataset.tab;
+        var panel = document.getElementById(tabId);
+        if (panel) panel.classList.add('active');
+      });
+    });
+
+    const cursor = document.querySelector(".webgl-glass-cursor");
+    let mouseX=0, mouseY=0, currentX=0, currentY=0, speed=0.15;
+    document.addEventListener("mousemove", e => { mouseX=e.clientX; mouseY=e.clientY; });
+    function animateCursor() {
+      currentX += (mouseX - currentX) * speed;
+      currentY += (mouseY - currentY) * speed;
+      cursor.style.left = `${currentX}px`;
+      cursor.style.top  = `${currentY}px`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Reinit marquee for industries
+    const industriesMarquee = document.querySelector('.industries-section .marquee-content');
+    if (industriesMarquee) industriesMarquee.innerHTML += industriesMarquee.innerHTML;
+  </script>
+</body>
+</html>
