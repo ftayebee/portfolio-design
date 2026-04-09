@@ -46,29 +46,84 @@
   <div id="theme-backdrop"></div>
 
   <!-- Right Offcanvas Panel -->
-  <aside id="theme-panel">
-    <h3>Theme Settings</h3>
-
-    <!-- Banner Background -->
-    <div class="setting-section">
-      <h4>Banner Background</h4>
-      <div class="bg-options">
-        <div class="bg-item" data-bg="./assets/images/banner-bg2.png"></div>
-        <div class="bg-item" data-bg="./assets/images/banner-bg.png"></div>
-        <div class="bg-item" data-bg="./assets/images/banner-bg3.png"></div>
-        <div class="bg-item" data-bg="./assets/images/banner-bg4.png"></div>
-      </div>
+  <aside id="theme-panel" aria-label="Theme settings panel">
+    <div class="theme-panel-header">
+      <h3>Customize</h3>
+      <button class="theme-panel-close" id="closeThemePanel" aria-label="Close theme panel"><i class="ri-close-line"></i></button>
     </div>
+    <div class="theme-panel-body">
 
-    <!-- Theme Colors -->
-    <div class="setting-section">
-      <h4>Theme Colors</h4>
-      <div class="theme-colors">
-        <div class="color-item" data-theme="dark-green" style="background: #4caf50"></div>
-        <div class="color-item" data-theme="dark-orange" style="background: #ff987b"></div>
-        <div class="color-item" data-theme="dark-purple" style="background: #7b57ff"></div>
-        <div class="color-item" data-theme="dark-teal" style="background: #009688"></div>
+      <!-- Theme Colors -->
+      <div class="setting-section">
+        <h4>Accent Color</h4>
+        <div class="theme-colors">
+          <div class="color-item selected" data-theme="dark-green"  title="Green"  style="background:#78C841"></div>
+          <div class="color-item"          data-theme="dark-orange" title="Orange" style="background:#FF7A4D"></div>
+          <div class="color-item"          data-theme="dark-purple" title="Purple" style="background:#7B57FF"></div>
+          <div class="color-item"          data-theme="dark-teal"   title="Teal"   style="background:#26C6DA"></div>
+        </div>
       </div>
+
+      <!-- Banner Background -->
+      <div class="setting-section">
+        <h4>Banner Background</h4>
+        <div class="bg-options">
+          <div class="bg-item selected" data-bg="./assets/images/banner-bg2.png" title="Background 1"></div>
+          <div class="bg-item"          data-bg="./assets/images/banner-bg.png"  title="Background 2"></div>
+          <div class="bg-item"          data-bg="./assets/images/banner-bg3.png" title="Background 3"></div>
+          <div class="bg-item"          data-bg="./assets/images/banner-bg4.png" title="Background 4"></div>
+        </div>
+      </div>
+
+      <!-- Border Style -->
+      <div class="setting-section">
+        <h4>Card Corner Style</h4>
+        <div class="font-options">
+          <button class="font-btn active" data-radius="rounded">Rounded</button>
+          <button class="font-btn"        data-radius="sharp">Sharp</button>
+        </div>
+      </div>
+
+      <!-- Font Scale -->
+      <div class="setting-section">
+        <h4>Text Size</h4>
+        <div class="font-options">
+          <button class="font-btn active" data-font-scale="default">Default</button>
+          <button class="font-btn"        data-font-scale="large">Large</button>
+        </div>
+      </div>
+
+      <!-- Toggles -->
+      <div class="setting-section">
+        <h4>Effects</h4>
+        <div class="setting-toggle">
+          <span class="setting-toggle-label">Glass blur effect</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleGlass" checked />
+            <span class="toggle-track"></span>
+          </label>
+        </div>
+        <div class="setting-toggle">
+          <span class="setting-toggle-label">Scroll animations</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleAnimations" checked />
+            <span class="toggle-track"></span>
+          </label>
+        </div>
+        <div class="setting-toggle">
+          <span class="setting-toggle-label">Cursor follower</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleCursor" checked />
+            <span class="toggle-track"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Reset -->
+      <div class="setting-section">
+        <button class="panel-reset-btn" id="resetTheme">Reset to Default</button>
+      </div>
+
     </div>
   </aside>
 

@@ -140,21 +140,18 @@ $(document).ready(function () {
     // Observe each element
     revealElements.forEach(el => observer.observe(el));
 
-    const openBtn = document.getElementById("openThemePanel");
-    const panel = document.getElementById("theme-panel");
+    const openBtn  = document.getElementById("openThemePanel");
+    const closeBtn = document.getElementById("closeThemePanel");
+    const panel    = document.getElementById("theme-panel");
     const backdrop = document.getElementById("theme-backdrop");
 
-    // Open Panel
-    openBtn.addEventListener("click", () => {
-        panel.classList.add("active");
-        backdrop.classList.add("active");
-    });
+    function openPanel()  { panel.classList.add("active");    backdrop.classList.add("active");    }
+    function closePanel() { panel.classList.remove("active"); backdrop.classList.remove("active"); }
 
-    // Close Panel When Clicking Backdrop
-    backdrop.addEventListener("click", () => {
-        panel.classList.remove("active");
-        backdrop.classList.remove("active");
-    });
+    if (openBtn)  openBtn.addEventListener("click", openPanel);
+    if (closeBtn) closeBtn.addEventListener("click", closePanel);
+    backdrop.addEventListener("click", closePanel);
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closePanel(); });
 
     function initTypewriter(sectionSelector, delay = 0) {
         const lines = document.querySelectorAll(`${sectionSelector} .ft-typewriter-lines .line`);
@@ -196,19 +193,13 @@ $(document).ready(function () {
     document.querySelectorAll(".bg-item").forEach(item => {
         item.addEventListener("click", () => {
             const bg = item.dataset.bg;
-            document.querySelectorAll(".bg-item").forEach(item => {
-                item.addEventListener("click", () => {
-                    const bg = item.dataset.bg;
-                    const banner = document.querySelector(".sec-banner");
-
-                    if (banner) {
-                        banner.style.backgroundImage = `url(${bg})`;
-                        banner.style.backgroundSize = "cover";
-                        banner.style.backgroundPosition = "center";
-                    }
-                });
-            });
-
+            const banner = document.querySelector(".sec-banner");
+            if (banner) {
+                banner.style.backgroundImage = `url(${bg})`;
+            }
+            document.querySelectorAll(".bg-item").forEach(i => i.classList.remove("selected"));
+            item.classList.add("selected");
+            try { localStorage.setItem("ft-banner-bg", bg); } catch(e) {}
         });
     });
 
@@ -218,10 +209,134 @@ $(document).ready(function () {
     document.querySelectorAll(".color-item").forEach(color => {
         color.addEventListener("click", () => {
             const theme = color.dataset.theme;
-            console.log(theme)
             document.body.setAttribute("data-theme", theme);
+            document.querySelectorAll(".color-item").forEach(c => c.classList.remove("selected"));
+            color.classList.add("selected");
+            try { localStorage.setItem("ft-theme", theme); } catch(e) {}
         });
     });
+
+    /* ===========================
+    CARD CORNER STYLE
+    =========================== */
+    document.querySelectorAll(".font-btn[data-radius]").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const val = btn.dataset.radius;
+            document.body.setAttribute("data-radius", val === "rounded" ? "" : "sharp");
+            document.querySelectorAll(".font-btn[data-radius]").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            try { localStorage.setItem("ft-radius", val); } catch(e) {}
+        });
+    });
+
+    /* ===========================
+    FONT SCALE
+    =========================== */
+    document.querySelectorAll(".font-btn[data-font-scale]").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const val = btn.dataset.fontScale;
+            document.body.setAttribute("data-font-scale", val);
+            document.querySelectorAll(".font-btn[data-font-scale]").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            try { localStorage.setItem("ft-font-scale", val); } catch(e) {}
+        });
+    });
+
+    /* ===========================
+    GLASS EFFECT TOGGLE
+    =========================== */
+    const toggleGlass = document.getElementById("toggleGlass");
+    if (toggleGlass) {
+        toggleGlass.addEventListener("change", () => {
+            document.body.setAttribute("data-glass", toggleGlass.checked ? "on" : "off");
+            try { localStorage.setItem("ft-glass", toggleGlass.checked ? "on" : "off"); } catch(e) {}
+        });
+    }
+
+    /* ===========================
+    ANIMATIONS TOGGLE
+    =========================== */
+    const toggleAnim = document.getElementById("toggleAnimations");
+    if (toggleAnim) {
+        toggleAnim.addEventListener("change", () => {
+            if (!toggleAnim.checked) {
+                document.querySelectorAll(".scroll-reveal").forEach(el => {
+                    el.classList.add("visible");
+                });
+            }
+            try { localStorage.setItem("ft-animations", toggleAnim.checked ? "on" : "off"); } catch(e) {}
+        });
+    }
+
+    /* ===========================
+    RESET TO DEFAULT
+    =========================== */
+    const resetBtn = document.getElementById("resetTheme");
+    if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+            document.body.setAttribute("data-theme", "dark-green");
+            document.body.removeAttribute("data-radius");
+            document.body.removeAttribute("data-font-scale");
+            document.body.setAttribute("data-glass", "on");
+            const banner = document.querySelector(".sec-banner");
+            if (banner) banner.style.backgroundImage = "";
+            document.querySelectorAll(".color-item").forEach((c,i) => c.classList.toggle("selected", i === 0));
+            document.querySelectorAll(".bg-item").forEach((b,i) => b.classList.toggle("selected", i === 0));
+            document.querySelectorAll(".font-btn[data-radius]").forEach((b,i) => b.classList.toggle("active", i === 0));
+            document.querySelectorAll(".font-btn[data-font-scale]").forEach((b,i) => b.classList.toggle("active", i === 0));
+            if (toggleGlass) { toggleGlass.checked = true; }
+            if (toggleAnim)  { toggleAnim.checked = true; }
+            try {
+                localStorage.removeItem("ft-theme");
+                localStorage.removeItem("ft-banner-bg");
+                localStorage.removeItem("ft-radius");
+                localStorage.removeItem("ft-font-scale");
+                localStorage.removeItem("ft-glass");
+            } catch(e) {}
+        });
+    }
+
+    /* ===========================
+    RESTORE SAVED SETTINGS
+    =========================== */
+    (function restoreSettings() {
+        try {
+            const savedTheme = localStorage.getItem("ft-theme");
+            if (savedTheme) {
+                document.body.setAttribute("data-theme", savedTheme);
+                document.querySelectorAll(".color-item").forEach(c => {
+                    c.classList.toggle("selected", c.dataset.theme === savedTheme);
+                });
+            }
+            const savedBg = localStorage.getItem("ft-banner-bg");
+            if (savedBg) {
+                const banner = document.querySelector(".sec-banner");
+                if (banner) banner.style.backgroundImage = `url(${savedBg})`;
+                document.querySelectorAll(".bg-item").forEach(b => {
+                    b.classList.toggle("selected", b.dataset.bg === savedBg);
+                });
+            }
+            const savedRadius = localStorage.getItem("ft-radius");
+            if (savedRadius === "sharp") {
+                document.body.setAttribute("data-radius", "sharp");
+                document.querySelectorAll(".font-btn[data-radius]").forEach(b => {
+                    b.classList.toggle("active", b.dataset.radius === "sharp");
+                });
+            }
+            const savedScale = localStorage.getItem("ft-font-scale");
+            if (savedScale === "large") {
+                document.body.setAttribute("data-font-scale", "large");
+                document.querySelectorAll(".font-btn[data-font-scale]").forEach(b => {
+                    b.classList.toggle("active", b.dataset.fontScale === "large");
+                });
+            }
+            const savedGlass = localStorage.getItem("ft-glass");
+            if (savedGlass === "off") {
+                document.body.setAttribute("data-glass", "off");
+                if (toggleGlass) toggleGlass.checked = false;
+            }
+        } catch(e) {}
+    })();
 
 });
 

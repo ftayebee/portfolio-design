@@ -31,24 +31,63 @@
 
   <button class="btn-theme-setting" id="openThemePanel" aria-label="Open theme settings"><i class="ri-settings-2-line"></i></button>
   <div id="theme-backdrop"></div>
-  <aside id="theme-panel">
-    <h3>Theme Settings</h3>
-    <div class="setting-section">
-      <h4>Banner Background</h4>
-      <div class="bg-options">
-        <div class="bg-item" data-bg="./assets/images/banner-bg2.png"></div>
-        <div class="bg-item" data-bg="./assets/images/banner-bg.png"></div>
-        <div class="bg-item" data-bg="./assets/images/banner-bg3.png"></div>
-        <div class="bg-item" data-bg="./assets/images/banner-bg4.png"></div>
-      </div>
+  <aside id="theme-panel" aria-label="Theme settings panel">
+    <div class="theme-panel-header">
+      <h3>Customize</h3>
+      <button class="theme-panel-close" id="closeThemePanel" aria-label="Close theme panel"><i class="ri-close-line"></i></button>
     </div>
-    <div class="setting-section">
-      <h4>Theme Colors</h4>
-      <div class="theme-colors">
-        <div class="color-item" data-theme="dark-green"  style="background:#4caf50"></div>
-        <div class="color-item" data-theme="dark-orange" style="background:#ff987b"></div>
-        <div class="color-item" data-theme="dark-purple" style="background:#7b57ff"></div>
-        <div class="color-item" data-theme="dark-teal"   style="background:#009688"></div>
+    <div class="theme-panel-body">
+      <div class="setting-section">
+        <h4>Accent Color</h4>
+        <div class="theme-colors">
+          <div class="color-item selected" data-theme="dark-green"  title="Green"  style="background:#78C841"></div>
+          <div class="color-item"          data-theme="dark-orange" title="Orange" style="background:#FF7A4D"></div>
+          <div class="color-item"          data-theme="dark-purple" title="Purple" style="background:#7B57FF"></div>
+          <div class="color-item"          data-theme="dark-teal"   title="Teal"   style="background:#26C6DA"></div>
+        </div>
+      </div>
+      <div class="setting-section">
+        <h4>Banner Background</h4>
+        <div class="bg-options">
+          <div class="bg-item selected" data-bg="./assets/images/banner-bg2.png" title="Background 1"></div>
+          <div class="bg-item"          data-bg="./assets/images/banner-bg.png"  title="Background 2"></div>
+          <div class="bg-item"          data-bg="./assets/images/banner-bg3.png" title="Background 3"></div>
+          <div class="bg-item"          data-bg="./assets/images/banner-bg4.png" title="Background 4"></div>
+        </div>
+      </div>
+      <div class="setting-section">
+        <h4>Card Corner Style</h4>
+        <div class="font-options">
+          <button class="font-btn active" data-radius="rounded">Rounded</button>
+          <button class="font-btn"        data-radius="sharp">Sharp</button>
+        </div>
+      </div>
+      <div class="setting-section">
+        <h4>Text Size</h4>
+        <div class="font-options">
+          <button class="font-btn active" data-font-scale="default">Default</button>
+          <button class="font-btn"        data-font-scale="large">Large</button>
+        </div>
+      </div>
+      <div class="setting-section">
+        <h4>Effects</h4>
+        <div class="setting-toggle">
+          <span class="setting-toggle-label">Glass blur effect</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleGlass" checked />
+            <span class="toggle-track"></span>
+          </label>
+        </div>
+        <div class="setting-toggle">
+          <span class="setting-toggle-label">Scroll animations</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleAnimations" checked />
+            <span class="toggle-track"></span>
+          </label>
+        </div>
+      </div>
+      <div class="setting-section">
+        <button class="panel-reset-btn" id="resetTheme">Reset to Default</button>
       </div>
     </div>
   </aside>
@@ -115,7 +154,7 @@
     </section>
 
     <!-- ALL SERVICES GRID -->
-    <section class="services-section container-fluid padding-gap" style="background:#0b1a0b;">
+    <section class="services-section container-fluid padding-gap bg-alt-2">
       <span class="section-tag text-center d-block scroll-reveal from-bottom">
         <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> WHAT I DO
       </span>
@@ -289,8 +328,8 @@
       </div>
     </section>
 
-    <!-- HOW I WORK — DEVELOPMENT PROCESS (reused) -->
-    <section class="dev-process-section container-fluid padding-gap" style="background:var(--process-background-color);">
+    <!-- HOW I WORK — DEVELOPMENT PROCESS -->
+    <section class="ft-inner-section bg-alt-3">
       <div class="text-center mb-5">
         <span class="section-tag d-inline-flex align-items-center gap-2 scroll-reveal from-bottom">
           <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" /> MY PROCESS
@@ -303,31 +342,35 @@
         </p>
       </div>
       <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
-          <div class="benifit-item h-100">
-            <div class="icon-box"><i class="ri-search-eye-line"></i></div>
-            <h4>01. Discovery</h4>
+        <div class="col-12 col-sm-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="process-card" data-tilt>
+            <div class="process-card-num">01</div>
+            <div class="process-card-icon"><i class="ri-search-eye-line"></i></div>
+            <h4>Discovery</h4>
             <p>We analyse your goals, define scope, identify requirements, and agree on a realistic roadmap before any code is written.</p>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
-          <div class="benifit-item h-100">
-            <div class="icon-box"><i class="ri-draft-line"></i></div>
-            <h4>02. Planning</h4>
+        <div class="col-12 col-sm-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="process-card" data-tilt>
+            <div class="process-card-num">02</div>
+            <div class="process-card-icon"><i class="ri-draft-line"></i></div>
+            <h4>Planning</h4>
             <p>I create detailed wireframes, architecture diagrams, and a sprint plan so both of us can track progress clearly.</p>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
-          <div class="benifit-item h-100">
-            <div class="icon-box"><i class="ri-code-box-line"></i></div>
-            <h4>03. Development</h4>
-            <p>Clean, tested code is written in sprints with regular check-ins. You have visibility into progress every step of the way.</p>
+        <div class="col-12 col-sm-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="process-card" data-tilt>
+            <div class="process-card-num">03</div>
+            <div class="process-card-icon"><i class="ri-code-box-line"></i></div>
+            <h4>Development</h4>
+            <p>Clean, tested code written in sprints with regular check-ins. You have full visibility into progress every step of the way.</p>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 scroll-reveal from-bottom">
-          <div class="benifit-item h-100">
-            <div class="icon-box"><i class="ri-rocket-2-line"></i></div>
-            <h4>04. Launch &amp; Support</h4>
+        <div class="col-12 col-sm-6 col-lg-3 scroll-reveal from-bottom">
+          <div class="process-card" data-tilt>
+            <div class="process-card-num">04</div>
+            <div class="process-card-icon"><i class="ri-rocket-2-line"></i></div>
+            <h4>Launch &amp; Support</h4>
             <p>Full deployment, post-launch testing, documentation handover, and optional ongoing support retainer.</p>
           </div>
         </div>
@@ -509,6 +552,84 @@
         <div class="col-12 col-lg-5">
           <div class="cta-image"><img src="./assets/images/cta-img.png" alt="Start a project" /></div>
         </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonial-section container-fluid padding-gap" role="region" aria-label="Client testimonials">
+      <span class="section-tag text-center d-block scroll-reveal from-bottom">
+        <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" aria-hidden="true" /> Client Stories
+      </span>
+      <h2 class="section-title text-center scroll-reveal from-bottom">
+        Trusted by <span class="highlight">Real Clients</span>
+      </h2>
+      <p class="section-subtitle m-auto text-center scroll-reveal from-bottom">
+        Real feedback from real projects — no stock quotes.
+      </p>
+      <div class="swiper testimonial-swiper mt-5 scroll-reveal from-bottom">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-rating"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                <div class="testimonial-quote-icon"><i class="ri-double-quotes-r"></i></div>
+              </div>
+              <blockquote class="testimonial-quote">"Working with Jonathan was one of the best decisions we made for our product launch. The attention to detail, clean code, and speed of delivery was truly exceptional."</blockquote>
+              <div class="testimonial-author">
+                <img src="./assets/images/avatar-1.jpg" alt="John Doe" class="testimonial-avatar" loading="lazy" />
+                <div class="testimonial-author-info"><strong class="testimonial-name">John Doe</strong><span class="testimonial-role">CEO, Company Inc.</span></div>
+                <div class="testimonial-company-badge"><i class="ri-building-line"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card testimonial-card-featured">
+              <div class="testimonial-card-top">
+                <div class="testimonial-rating"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                <div class="testimonial-quote-icon"><i class="ri-double-quotes-r"></i></div>
+              </div>
+              <blockquote class="testimonial-quote">"Our e-commerce revenue increased 40% within the first month after launch. Exceptional full-stack work — clear communication throughout the entire process."</blockquote>
+              <div class="testimonial-author">
+                <img src="./assets/images/avatar-2.jpg" alt="Jane Smith" class="testimonial-avatar" loading="lazy" />
+                <div class="testimonial-author-info"><strong class="testimonial-name">Jane Smith</strong><span class="testimonial-role">Marketing Head, BrandCo</span></div>
+                <div class="testimonial-company-badge"><i class="ri-store-3-line"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-rating"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div>
+                <div class="testimonial-quote-icon"><i class="ri-double-quotes-r"></i></div>
+              </div>
+              <blockquote class="testimonial-quote">"The API integration work was flawless. Took a complex brief and turned it into a maintainable, well-documented backend. Would hire again in a heartbeat."</blockquote>
+              <div class="testimonial-author">
+                <img src="./assets/images/avatar-3.jpg" alt="Alice Johnson" class="testimonial-avatar" loading="lazy" />
+                <div class="testimonial-author-info"><strong class="testimonial-name">Alice Johnson</strong><span class="testimonial-role">CTO, TechWorld</span></div>
+                <div class="testimonial-company-badge"><i class="ri-code-s-slash-line"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-rating"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                <div class="testimonial-quote-icon"><i class="ri-double-quotes-r"></i></div>
+              </div>
+              <blockquote class="testimonial-quote">"Delivered a complete redesign of our SaaS dashboard in 3 weeks. Post-handoff documentation made our internal team's life so much easier. 10/10."</blockquote>
+              <div class="testimonial-author">
+                <img src="./assets/images/avatar-1.jpg" alt="Mark Rivera" class="testimonial-avatar" loading="lazy" />
+                <div class="testimonial-author-info"><strong class="testimonial-name">Mark Rivera</strong><span class="testimonial-role">Product Lead, Nexlayer</span></div>
+                <div class="testimonial-company-badge"><i class="ri-layout-4-line"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-nav d-flex justify-content-center align-items-center gap-3 mt-4">
+        <button class="testimonial-nav-btn" id="testPrev" aria-label="Previous testimonial"><i class="ri-arrow-left-line"></i></button>
+        <div class="swiper-pagination testimonial-pagination"></div>
+        <button class="testimonial-nav-btn" id="testNext" aria-label="Next testimonial"><i class="ri-arrow-right-line"></i></button>
       </div>
     </section>
 
