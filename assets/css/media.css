@@ -705,18 +705,34 @@
         grid-template-columns: 1fr;
     }
 
-    /* Project summary → single col */
+    /* Project summary → flex-wrap on mobile */
     .project-summary-bar {
-        grid-template-columns: 1fr;
+        flex-wrap: wrap;
     }
 
     .project-summary-item {
-        border-right: none !important;
+        flex: 0 0 calc(50% - 1px);
+        min-width: auto;
+        border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .project-summary-item:last-child {
         border-bottom: none;
+    }
+
+    .project-summary-divider {
+        display: none;
+    }
+
+    /* Project hero title */
+    .project-hero-title {
+        font-size: 2.4rem;
+    }
+
+    /* Testimonial large */
+    .testimonial-large-quote {
+        font-size: 1rem;
     }
 
     /* Service hero */
@@ -873,6 +889,27 @@
 
     .page-hero-title {
         font-size: 1.7rem;
+    }
+
+    .project-hero-title {
+        font-size: 2rem;
+    }
+
+    .project-summary-item {
+        flex: 0 0 100%;
+    }
+
+    .testimonial-large {
+        padding: 28px 20px;
+    }
+
+    .testimonial-large-quote {
+        font-size: 0.95rem;
+    }
+
+    .cta-stat-pill {
+        font-size: 0.82rem;
+        padding: 10px 16px;
     }
 
     .page-hero-content {

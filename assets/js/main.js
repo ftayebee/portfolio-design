@@ -88,19 +88,24 @@ $(document).ready(function () {
 
     const testimonialSwiper = new Swiper('.testimonial-swiper', {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 24,
         loop: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '#testNext',
+            prevEl: '#testPrev',
+        },
+        pagination: {
+            el: '.testimonial-pagination',
+            clickable: true,
         },
         breakpoints: {
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
+            768:  { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 24 }
         },
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         }
     });
 
@@ -416,7 +421,64 @@ $(document).ready(function () {
 
 
 /* -----------------------------------------------------------------------------
-   7. GLASS ACCORDION — custom toggle (supplements Bootstrap)
+   7. MOBILE DRAWER
+   Full-screen slide-in nav drawer. Replaces Bootstrap collapse for mobile.
+   Handles toggle, close on link click, close on ESC, body scroll lock.
+   ----------------------------------------------------------------------------- */
+(function () {
+    const toggle   = document.getElementById('mobileToggle');
+    const drawer   = document.getElementById('mobileMenu');
+    const navbar   = document.getElementById('main-navbar');
+    if (!toggle || !drawer) return;
+
+    function openDrawer() {
+        drawer.classList.add('is-open');
+        drawer.removeAttribute('aria-hidden');
+        toggle.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('drawer-open');
+    }
+
+    function closeDrawer() {
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('drawer-open');
+    }
+
+    toggle.addEventListener('click', function () {
+        const isOpen = drawer.classList.contains('is-open');
+        isOpen ? closeDrawer() : openDrawer();
+    });
+
+    // Close on any link click inside drawer
+    drawer.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeDrawer);
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+            closeDrawer();
+            toggle.focus();
+        }
+    });
+
+    // Close if user taps outside drawer (on the translucent area)
+    document.addEventListener('click', function (e) {
+        if (drawer.classList.contains('is-open')
+            && !drawer.contains(e.target)
+            && e.target !== toggle
+            && !toggle.contains(e.target)) {
+            closeDrawer();
+        }
+    });
+})();
+
+
+/* -----------------------------------------------------------------------------
+   8. GLASS ACCORDION — custom toggle (supplements Bootstrap)
    Adds .open on the .accordion-item when its panel is open so the gradient
    border rule in CSS applies correctly.
    ----------------------------------------------------------------------------- */

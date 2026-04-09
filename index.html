@@ -119,33 +119,27 @@
         </div>
 
         <!-- Hamburger button (mobile) -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu"
+        <button class="navbar-toggler d-lg-none" id="mobileToggle" type="button"
           aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <div class="hamburger-icon">
+            <span></span><span></span><span></span>
+          </div>
         </button>
 
-        <!-- Mobile Menu -->
-        <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
-          <ul class="navbar-nav text-center w-100">
-            <li class="nav-item">
-              <a class="nav-link nav-home active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-about" href="#about">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-portfolio" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-services" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-contact" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item mt-2">
-              <a class="btn btn-outline-primary w-100" href="#contact-me">Contact Me</a>
-            </li>
-          </ul>
+        <!-- Mobile Menu — full-screen drawer -->
+        <div class="mobile-drawer d-lg-none" id="mobileMenu" aria-hidden="true">
+          <div class="mobile-drawer-inner">
+            <ul class="mobile-nav-list">
+              <li><a class="mobile-nav-link nav-home" href="index.html">Home</a></li>
+              <li><a class="mobile-nav-link nav-about" href="about.html">About Me</a></li>
+              <li><a class="mobile-nav-link nav-portfolio" href="portfolio.html">Portfolio</a></li>
+              <li><a class="mobile-nav-link nav-services" href="services.html">Services</a></li>
+              <li><a class="mobile-nav-link nav-contact" href="contact.html">Contact</a></li>
+            </ul>
+            <a class="btn btn-primary btn-main mt-4 w-100" href="contact.html">
+              <i class="ri-send-plane-line me-2" aria-hidden="true"></i>Start a Project
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -351,201 +345,139 @@
 
       <div class="services-grid mt-5">
         <!-- Service 1 -->
-        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt
-          data-glass-zoom>
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
           <div class="service-header d-flex justify-content-between align-items-center">
-            <div class="service-icon">
-              <i class="ri-code-s-slash-line"></i>
-            </div>
+            <div class="service-icon"><i class="ri-code-s-slash-line" aria-hidden="true"></i></div>
             <div class="btn-container">
-              <a href="/link" class="btn btn-sm btn-service-detail">
-                Learn More
-                <span class="btn-service-icon">
-                  <i class="ri-arrow-right-line"></i>
-                </span>
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
           <div class="service-content">
-            <h4 class="mt-3 text-left">Full Stack Development</h4>
-            <p class="text-left">
-              End-to-end development using Laravel, Vue.js, JS, and modern
-              tools to build complete web applications.
-            </p>
+            <h4>Full Stack Development</h4>
+            <p>End-to-end development using Laravel, Vue.js, and modern tools to build complete web applications.</p>
           </div>
+          <span class="service-number" aria-hidden="true">01</span>
         </div>
 
         <!-- Service 2 -->
-        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt
-          data-glass-zoom>
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
           <div class="service-header d-flex justify-content-between align-items-center">
-            <div class="service-icon">
-              <i class="ri-database-2-line"></i>
-            </div>
+            <div class="service-icon"><i class="ri-database-2-line" aria-hidden="true"></i></div>
             <div class="btn-container">
-              <a href="/link" class="btn btn-sm btn-service-detail">
-                Learn More
-                <span class="btn-service-icon">
-                  <i class="ri-arrow-right-line"></i>
-                </span>
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
           <div class="service-content">
-            <h4 class="mt-3">API & Backend Development</h4>
-            <p>
-              Secure, scalable REST APIs, database architecture,
-              authentication, and backend logic using Laravel & PHP.
-            </p>
+            <h4>API & Backend Development</h4>
+            <p>Secure, scalable REST APIs, database architecture, and backend logic using Laravel & PHP.</p>
           </div>
+          <span class="service-number" aria-hidden="true">02</span>
         </div>
 
         <!-- Service 3 -->
-        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt
-          data-glass-zoom>
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
           <div class="service-header d-flex justify-content-between align-items-center">
-            <div class="service-icon">
-              <i class="ri-layout-4-line"></i>
-            </div>
+            <div class="service-icon"><i class="ri-layout-4-line" aria-hidden="true"></i></div>
             <div class="btn-container">
-              <a href="/link" class="btn btn-sm btn-service-detail">
-                Learn More
-                <span class="btn-service-icon">
-                  <i class="ri-arrow-right-line"></i>
-                </span>
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
           <div class="service-content">
-            <h4 class="mt-3">Frontend Engineering</h4>
-            <p>
-              Beautiful, fast, responsive UI using Vue.js, Tailwind CSS,
-              Bootstrap, and modern JavaScript.
-            </p>
+            <h4>Frontend Engineering</h4>
+            <p>Beautiful, responsive UI using Vue.js, Tailwind CSS, Bootstrap, and modern JavaScript.</p>
           </div>
+          <span class="service-number" aria-hidden="true">03</span>
         </div>
 
         <!-- Service 4 -->
-        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt
-          data-glass-zoom>
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
           <div class="service-header d-flex justify-content-between align-items-center">
-            <div class="service-icon">
-              <i class="ri-speed-up-line"></i>
-            </div>
+            <div class="service-icon"><i class="ri-speed-up-line" aria-hidden="true"></i></div>
             <div class="btn-container">
-              <a href="/link" class="btn btn-sm btn-service-detail">
-                Learn More
-                <span class="btn-service-icon">
-                  <i class="ri-arrow-right-line"></i>
-                </span>
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
           <div class="service-content">
-            <h4 class="mt-3">Performance Optimization</h4>
-            <p>
-              Speed, SEO optimization, caching, and code improvements for a
-              smoother and faster user experience.
-            </p>
+            <h4>Performance Optimization</h4>
+            <p>Speed, SEO, caching, and code improvements for a smoother and faster user experience.</p>
           </div>
+          <span class="service-number" aria-hidden="true">04</span>
         </div>
 
         <!-- Service 5 -->
-        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt
-          data-glass-zoom>
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
           <div class="service-header d-flex justify-content-between align-items-center">
-            <div class="service-icon">
-              <i class="ri-tools-line"></i>
-            </div>
+            <div class="service-icon"><i class="ri-tools-line" aria-hidden="true"></i></div>
             <div class="btn-container">
-              <a href="/link" class="btn btn-sm btn-service-detail">
-                Learn More
-                <span class="btn-service-icon">
-                  <i class="ri-arrow-right-line"></i>
-                </span>
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
           <div class="service-content">
-            <h4 class="mt-3">System Maintenance & Support</h4>
-            <p>
-              Bug fixes, updates, feature enhancements, and long-term
-              technical support for your applications.
-            </p>
+            <h4>System Maintenance & Support</h4>
+            <p>Bug fixes, updates, feature enhancements, and long-term technical support for your applications.</p>
           </div>
+          <span class="service-number" aria-hidden="true">05</span>
         </div>
 
         <!-- Service 6 -->
-        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt
-          data-glass-zoom>
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
           <div class="service-header d-flex justify-content-between align-items-center">
-            <div class="service-icon">
-              <i class="ri-shopping-cart-2-line"></i>
-            </div>
+            <div class="service-icon"><i class="ri-shopping-cart-2-line" aria-hidden="true"></i></div>
             <div class="btn-container">
-              <a href="/link" class="btn btn-sm btn-service-detail">
-                Learn More
-                <span class="btn-service-icon">
-                  <i class="ri-arrow-right-line"></i>
-                </span>
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
           <div class="service-content">
-            <h4 class="mt-3">E-commerce Development</h4>
-            <p>
-              High-quality Laravel/Vue.js powered e-commerce systems with
-              secure payments and product management features.
-            </p>
+            <h4>E-commerce Development</h4>
+            <p>Laravel/Vue.js powered e-commerce systems with secure payments and product management.</p>
           </div>
+          <span class="service-number" aria-hidden="true">06</span>
         </div>
+
         <!-- Service 7 -->
-        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt
-          data-glass-zoom>
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
           <div class="service-header d-flex justify-content-between align-items-center">
-            <div class="service-icon">
-              <i class="ri-wordpress-line"></i>
-            </div>
+            <div class="service-icon"><i class="ri-wordpress-line" aria-hidden="true"></i></div>
             <div class="btn-container">
-              <a href="/link" class="btn btn-sm btn-service-detail">
-                Learn More
-                <span class="btn-service-icon">
-                  <i class="ri-arrow-right-line"></i>
-                </span>
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
           <div class="service-content">
-            <h4 class="mt-3">WordPress Development</h4>
-            <p>
-              Custom WordPress websites, themes, plugins, and CMS solutions
-              optimized for performance and SEO.
-            </p>
+            <h4>WordPress Development</h4>
+            <p>Custom WordPress websites, themes, plugins, and CMS solutions optimised for SEO.</p>
           </div>
+          <span class="service-number" aria-hidden="true">07</span>
         </div>
+
         <!-- Service 8 -->
-        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt
-          data-glass-zoom>
+        <div class="service-card d-flex flex-column justify-content-between scroll-reveal from-bottom" data-tilt>
           <div class="service-header d-flex justify-content-between align-items-center">
-            <div class="service-icon">
-              <i class="ri-store-2-line"></i>
-            </div>
+            <div class="service-icon"><i class="ri-store-2-line" aria-hidden="true"></i></div>
             <div class="btn-container">
-              <a href="/link" class="btn btn-sm btn-service-detail">
-                Learn More
-                <span class="btn-service-icon">
-                  <i class="ri-arrow-right-line"></i>
-                </span>
+              <a href="service-single.html" class="btn btn-sm btn-service-detail">
+                Learn More <span class="btn-service-icon"><i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </a>
             </div>
           </div>
           <div class="service-content">
-            <h4 class="mt-3">WooCommerce Development</h4>
-            <p>
-              Fully customized WooCommerce stores with product management,
-              secure checkout, integrations, and high-speed optimization.
-            </p>
+            <h4>WooCommerce Development</h4>
+            <p>Fully customised WooCommerce stores with secure checkout, integrations, and high-speed optimisation.</p>
           </div>
+          <span class="service-number" aria-hidden="true">08</span>
         </div>
       </div>
     </section>
@@ -1253,87 +1185,164 @@
     <!-- Section: Industries Served End -->
 
     <!-- Section: Testimonials Start -->
-    <section class="testimonial-section container-fluid padding-gap">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-2">What Our Clients Say</h2>
-        <p class="text-gray-600 text-lg">
-          Hear from our happy customers and partners
-        </p>
-      </div>
+    <section class="testimonial-section container-fluid padding-gap" id="testimonials" role="region" aria-label="Client testimonials">
 
-      <!-- Swiper -->
-      <div class="relative mx-auto">
-        <div class="swiper testimonial-swiper">
-          <div class="swiper-wrapper">
-            <!-- Testimonial 1 -->
-            <div class="swiper-slide testimonial-item">
-              <div class="m-0">
-                <div class="mb-2 quotation">
-                  <img src="./assets/images/quotation.svg" alt="Quotation Mark" />
-                </div>
-                <p class="text-gray-700 mb-4">
-                  This is an amazing service! Highly professional and
-                  delivered above expectations.
-                </p>
-              </div>
-              <div class="author flex items-center mt-4">
-                <img src="./assets/images/avatar-1.jpg" alt="John Doe" class="w-12 h-12 rounded-full mr-4" />
-                <div class="author-info">
-                  <h6 class="font-semibold text-gray-800">John Doe</h6>
-                  <p class="text-gray-500 text-sm">CEO, Company Inc.</p>
-                </div>
-              </div>
-            </div>
+      <span class="section-tag text-center d-block scroll-reveal from-bottom">
+        <img src="./assets/images/icons/asterisk-icon.png" width="24" height="25" alt="" aria-hidden="true" /> Client Stories
+      </span>
+      <h2 class="section-title text-center scroll-reveal from-bottom">
+        Trusted by <span class="highlight">Real Clients</span>
+      </h2>
+      <p class="section-subtitle m-auto text-center scroll-reveal from-bottom">
+        Real feedback from real projects — no stock quotes.
+      </p>
 
-            <!-- Testimonial 2 -->
-            <div class="swiper-slide testimonial-item">
-              <div class="m-0">
-                <div class="mb-2 quotation">
-                  <img src="./assets/images/quotation.svg" alt="Quotation Mark" />
-                </div>
-                <p class="text-gray-700 mb-4">
-                  Exceptional experience, the team is skilled and responsive!
-                </p>
-              </div>
-              <div class="author flex items-center mt-4">
-                <img src="./assets/images/avatar-2.jpg" alt="Jane Smith" class="w-12 h-12 rounded-full mr-4" />
-                <div class="author-info">
-                  <h6 class="font-semibold text-gray-800">Jane Smith</h6>
-                  <p class="text-gray-500 text-sm">Marketing Head, BrandCo</p>
-                </div>
-              </div>
-            </div>
+      <div class="swiper testimonial-swiper mt-5 scroll-reveal from-bottom">
+        <div class="swiper-wrapper">
 
-            <!-- Testimonial 3 -->
-            <div class="swiper-slide testimonial-item">
-              <div class="m-0">
-                <div class="mb-2 quotation">
-                  <img src="./assets/images/quotation.svg" alt="Quotation Mark" />
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
                 </div>
-                <p class="text-gray-700 mb-4">
-                  Truly outstanding support and quality work. Highly
-                  recommended!
-                </p>
+                <div class="testimonial-quote-icon" aria-hidden="true">
+                  <i class="ri-double-quotes-r"></i>
+                </div>
               </div>
-              <div class="author flex items-center mt-4">
-                <img src="./assets/images/avatar-3.jpg" alt="Alice Johnson" class="w-12 h-12 rounded-full mr-4" />
-                <div class="author-info">
-                  <h6 class="font-semibold text-gray-800">Alice Johnson</h6>
-                  <p class="text-gray-500 text-sm">CTO, TechWorld</p>
+              <blockquote class="testimonial-quote">
+                "Working with Jonathan was one of the best decisions we made for our product launch.
+                The attention to detail, clean code, and speed of delivery was truly exceptional."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="./assets/images/avatar-1.jpg" alt="John Doe" class="testimonial-avatar" loading="lazy" />
+                <div class="testimonial-author-info">
+                  <strong class="testimonial-name">John Doe</strong>
+                  <span class="testimonial-role">CEO, Company Inc.</span>
+                </div>
+                <div class="testimonial-company-badge" aria-hidden="true">
+                  <i class="ri-building-line"></i>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Navigation Buttons BELOW the Swiper -->
-        <div class="d-flex justify-content-center mt-6 gap-4">
-          <div class="swiper-button-prev bg-white position-relative btn-swiper"></div>
-          <div class="swiper-button-next bg-white position-relative btn-swiper"></div>
-        </div>
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card testimonial-card-featured">
+              <div class="testimonial-card-top">
+                <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                </div>
+                <div class="testimonial-quote-icon" aria-hidden="true">
+                  <i class="ri-double-quotes-r"></i>
+                </div>
+              </div>
+              <blockquote class="testimonial-quote">
+                "Our e-commerce revenue increased 40% within the first month after launch.
+                Exceptional full-stack work — clear communication throughout the entire process."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="./assets/images/avatar-2.jpg" alt="Jane Smith" class="testimonial-avatar" loading="lazy" />
+                <div class="testimonial-author-info">
+                  <strong class="testimonial-name">Jane Smith</strong>
+                  <span class="testimonial-role">Marketing Head, BrandCo</span>
+                </div>
+                <div class="testimonial-company-badge" aria-hidden="true">
+                  <i class="ri-store-3-line"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-half-fill" aria-hidden="true"></i>
+                </div>
+                <div class="testimonial-quote-icon" aria-hidden="true">
+                  <i class="ri-double-quotes-r"></i>
+                </div>
+              </div>
+              <blockquote class="testimonial-quote">
+                "The API integration work was flawless. Took a complex brief and turned it into
+                a maintainable, well-documented backend. Would hire again in a heartbeat."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="./assets/images/avatar-3.jpg" alt="Alice Johnson" class="testimonial-avatar" loading="lazy" />
+                <div class="testimonial-author-info">
+                  <strong class="testimonial-name">Alice Johnson</strong>
+                  <span class="testimonial-role">CTO, TechWorld</span>
+                </div>
+                <div class="testimonial-company-badge" aria-hidden="true">
+                  <i class="ri-code-s-slash-line"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card-top">
+                <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                  <i class="ri-star-fill" aria-hidden="true"></i>
+                </div>
+                <div class="testimonial-quote-icon" aria-hidden="true">
+                  <i class="ri-double-quotes-r"></i>
+                </div>
+              </div>
+              <blockquote class="testimonial-quote">
+                "Delivered a complete redesign of our SaaS dashboard in 3 weeks. Post-handoff
+                documentation made our internal team's life so much easier. 10/10."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="./assets/images/avatar-1.jpg" alt="Mark Rivera" class="testimonial-avatar" loading="lazy" />
+                <div class="testimonial-author-info">
+                  <strong class="testimonial-name">Mark Rivera</strong>
+                  <span class="testimonial-role">Product Lead, Nexlayer</span>
+                </div>
+                <div class="testimonial-company-badge" aria-hidden="true">
+                  <i class="ri-layout-4-line"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.swiper-wrapper -->
+      </div><!-- /.swiper -->
+
+      <!-- Navigation -->
+      <div class="testimonial-nav d-flex justify-content-center align-items-center gap-3 mt-4">
+        <button class="testimonial-nav-btn" id="testPrev" aria-label="Previous testimonial">
+          <i class="ri-arrow-left-line" aria-hidden="true"></i>
+        </button>
+        <div class="swiper-pagination testimonial-pagination"></div>
+        <button class="testimonial-nav-btn" id="testNext" aria-label="Next testimonial">
+          <i class="ri-arrow-right-line" aria-hidden="true"></i>
+        </button>
       </div>
-    </section>
 
+    </section>
     <!-- Section: Testimonials End -->
 
     <!-- Section: Call To Action Start -->
